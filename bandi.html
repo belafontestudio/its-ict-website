@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ITS</title>
+		<meta name="description" content="Qualcosa di più di una scuola, qualcosa di diverso dall'accademia. Un luogo di formazione che è già posto di lavoro, dove si impara facendo. Dove i docenti sono professionisti e imprenditori che applicano e rinnovano quotidianamente in azienda il sapere e l'esperienza che trasmettono. Che tu ti senta più startupper o sogni l'assunzione, il nostro obiettivo è ampliare il campo delle tue possibilità. Campus, appunto. La Fondazione ITS per l'ICT Piemonte è un incubatore di futuro." />
+		<meta name="keywords" content="ITS, app design, interaction design, school, scuole, formazione, design dell'interazione, enhancers" />
+		<meta name="Luca Troisi" content="Qualcosa di più di una scuola, qualcosa di diverso dall'accademia. Un luogo di formazione che è già posto di lavoro, dove si impara facendo. Dove i docenti sono professionisti e imprenditori che applicano e rinnovano quotidianamente in azienda il sapere e l'esperienza che trasmettono. Che tu ti senta più startupper o sogni l'assunzione, il nostro obiettivo è ampliare il campo delle tue possibilità. Campus, appunto. La Fondazione ITS per l'ICT Piemonte è un incubatore di futuro." />
+		<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="stylesheets/skeleton.css">
+<link rel="stylesheet" href="stylesheets/base.css">
+<link rel="stylesheet" href="stylesheets/layout.css">
+
+	</head>
+	<body id="bandibody">
+
+	<div class="section" id="sectionbandi" >
+		<a class="its_logo" href="index.html">
+			<img src="images/istit/logo-its.png" id="logo" />
+		</a>
+		<div class="container">
+						<div class="article article_bandi">
+								<h2 class="pageTitleBandi">Bandi </h2>
+								<div class="six columns bandiAperti ">
+								<h3 class="bandiaperti">Bandi Aperti</h3>
+									<dl id="aperti" class="accordion">
+
+
+									</dl>
+								</div>
+								<div class="six columns bandiChiusi">
+								<h3 class="bandichiusi">Bandi Chiusi</h3>
+								<dl id="chiusi" class="accordion"></dl>
+								</div>
+								<div class="clear"></div>
+						</div>
+		</div><!-- /container -->
+	</div>
+		<script src="js/modernizr.custom.js"></script>
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+		<!--<script type='text/javascript' src='../js/jquery.cookie.js'></script>-->
+		<script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+		<script type="text/javascript" src="js/handlebars-v3.0.3.js"></script>
+		<script type="text/javascript" src="js/tenders.js"></script>
+
+
+
+	<script id="tender-template" type="text/x-handlebars-template">
+		{{#each tender}}
+			<dt><a href="">{{attributes.title}}</a></dt>
+			<dd>{{{attributes.body}}}
+					{{#each pdfs}}
+						<a href="{{attributes.url}}" class="link_bandi" target="_blank"><span class="icon_pdf">{{attributes.title}}</span></a>
+					{{/each}}
+			</dd>
+		{{/each}}
+	</script>
+
+
+
+		<!--<script type="text/javascript" src="js/flowtype.js"></script>-->
+		<!--<script>
+		$('body').flowtype({
+		   minimum   : 400,
+		   maximum   : 1300,
+		   minFont   : 12,
+		   maxFont   : 40,
+		   fontRatio : 70,
+		   lineRatio : 1.45
+		});
+		</script>
+		<script type='text/javascript' src='js/resize.js'></script>-->
+	</body>
+</html>

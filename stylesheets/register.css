@@ -1,0 +1,71 @@
+.full{
+	height: 100vh;
+  min-height: 600px;
+}
+.mdl-grid.demo-content{
+  margin: auto;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  min-height: 20%;
+  max-height: 90%;
+
+  z-index: 1
+}
+
+.mdl-grid.demo-content p{
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Raleway',sans-serif, helvetica;
+	padding: 27px 0 9px 0;
+}
+cf:before,
+.cf:after {
+   content: " "; /* 1 */
+   display: table; /* 2 */
+}
+
+.cf:after {
+   clear: both;
+}
+
+.register{
+  background-color: rgba(56, 168, 218, 0.70) !important;
+  position: relative;
+  padding: 17px;
+  margin: 0 auto;
+
+}
+
+.confirm{
+  text-align:  center;
+}
+.confirm>img{
+  width: 100px;
+}
+.mdl-textfield__label{
+  color: WhiteSmoke;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label{
+  color: white !important;
+}
+.mdl-checkbox__box-outline{
+  border: 1px solid WhiteSmoke !important;
+}
+.mdl-cell i{
+  color: white !important;
+}
+.picker__day{
+  color: black !important;
+}
+
+label.birthday.isSet{
+  display: none;
+}
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
+  background: white !important;
+}
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline{
+  border: 2px solid white;
+}
