@@ -93,10 +93,10 @@ color: white;
 }
 
 #popup .scroller{
-	overflow-y: scroll;
+	margin-bottom: 82px;
 }
 #popup .scroller div{
-	padding: 1em;
+	padding: 0.2em;
 	margin: 0 0 10px 0;
 }
 #popup span{
@@ -203,7 +203,9 @@ h2.pageTitleBandi{
 .accordion dt, .accordion dd {
 	padding: 1em ;
 }
-
+.accordion dd p,.accordion dd span,.accordion dd li,.accordion dd ol{
+	color: white !important;
+}
 .accordion dt{
 	background-color: rgba(255, 255, 255, .05);
 	border-top: 2px solid #9b59b6;
@@ -1046,6 +1048,7 @@ a.link_bandi{
 	font-weight: 500;
 	line-height: 18px;
 }
+
 
 .icon_pdf {
 	background-size: 19px 27px;

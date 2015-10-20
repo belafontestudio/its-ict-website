@@ -1,0 +1,224 @@
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ITS - ICT Piemonte</title>
+	<meta name="author" content="Luca Troisi" />
+	<meta name="description" content="lorem ipsum" />
+	<meta name="keywords"  content="lorem ipsum" />
+	<meta name="Resource-type" content="Document" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="material-design-lite/material.min.css">
+	<link rel="stylesheet" href="stylesheets/material.min.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="js/pickadate.js-3.5.6/lib/compressed/themes/default.css">
+	<link rel="stylesheet" href="js/pickadate.js-3.5.6/lib/compressed/themes/default.date.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="stylesheets/register.css">
+	</head>
+<body>
+
+
+<!--iphone nav-->
+<div id="menu" class="iphone">
+<div id="logo"> <a href="#home">
+	<img class="scale-with-grid"src="images/istit/logo-its.png" alt=""/></a>
+	<div class="lingua">
+		<a href="index.html" class="lang">It</a>  <a href="index_en.html" class="lang2">En</a>
+	</div>
+</div>
+<a href="#" id="iphone_menu">MENU</a>
+	<ul class="iphone_menu">
+		<li data-menuanchor="home"><a href="http://www.its-ictpiemonte.it/">Home</a></li>
+
+		<li class="colored" data-menuanchor="registrati"><a href="registrati.html">Registrati</a></li>
+		<li class="colored" data-menuanchor="bandi"><a href="bandi.html">Bandi</a></li>
+
+	</ul>
+</div>
+<!--end iphone nav-->
+<!--main nav-->
+<ul id="menu" class="group noiphone">
+<div id="logo"> <a href="#home">
+	<img class="scale-with-grid"src="images/istit/logo-its.png" alt=""/></a>
+	<div class="lingua">
+		<a href="index.html" class="lang">It</a>  <a href="index_en.html" class="lang2">En</a>
+	</div>
+</div>
+
+	<li class="colored" data-menuanchor="bandi"><a href="bandi.html">Bandi</a></li>
+	<li class="colored" data-menuanchor="registrati"><a href="registrati.html">Registrati</a></li>
+	<li data-menuanchor="home"><a href="http://www.its-ictpiemonte.it/">Home</a></li>
+
+</ul>
+<!--end main nav-->
+
+<div class="section full" id="section0">
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+
+			<div class="mdl-grid demo-content">
+				<div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--5-col mdl-cell--12-col-phone register">
+						<img id="itslogo" src="images/istit/logo-its.png" alt="">
+						<i class="mdl-color-text--blue-grey-400 material-icons">person</i>
+						<p>Profilo</p>
+						<p>Va completato entro la data di chiusura del bando, finchè il bando rimane aperto puoi modificare il tuo profilo</p>
+						<form id="update" method="post" action="/login.html">
+							<form id="signup" method="post" action="/registrati.html">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input id="name" name="name" type="text" class="mdl-textfield__input">
+									<label for="name" class="mdl-textfield__label">Nome</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input id="surname" name="surname" type="text" class="mdl-textfield__input">
+									<label for="surname" class="mdl-textfield__label">Cognome</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input id="email" name="email" type="email" class="mdl-textfield__input">
+									<label for="email" class="mdl-textfield__label">Email</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input id="fiscale" name="fiscale" type="text" class="mdl-textfield__input">
+									<label for="fiscale" class="mdl-textfield__label">Codice fiscale</label>
+								</div>
+								<p>I seguenti documenti sono obbligatori e devono essere caricati: <b>CV, Lettera di accompagnamento</b>
+									carica anche altre certificazioni per ottener eun punteggio migliore</p>
+								<table class="mdl-cell mdl-cell--12-col mdl-data-table mdl-data-table--selectable mdl-shadow--2dp">
+									<thead>
+										<tr>
+											<!-- <th class="mdl-data-table__cell--non-numeric">Creazione</th> -->
+											<th class="mdl-data-table__cell--non-numeric">Titolo</th>
+											<th class="mdl-data-table__cell--non-numeric">Azioni</th>
+										</tr>
+									</thead>
+									<tbody id="attachments">
+
+
+									</tbody>
+								</table>
+									<div class="button-righest">
+										<a id="submit" href="/aggiungi_pdf.html" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect">Aggiungi PDF</a>
+									</div>
+								<div class="mdl-textfield mdl-js-textfield" >
+									<input id="birthday" name="birthday" type="datetime" class="mdl-textfield__input datepicker">
+									<label for="birthday" class="birthday mdl-textfield__label">Data di nascita</label>
+								</div>
+								<div id="courses" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+									  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" value="Mobile App Design" />
+									  <span id="checkbox-1-label" class="mdl-checkbox__label">Mobile App Design</span>
+									</label>
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+									  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" value="Videomaking" />
+									  <span id="checkbox-2-label" class="mdl-checkbox__label">Videomaking</span>
+									</label>
+								</div>
+								<div class="button-right">
+									<button id="logout" value="logout" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+										Logout<span class="mdl-button__ripple-container">
+											<span class="mdl-ripple"></span>
+										</span>
+									</button>
+									<button id="submit" type="submit" value="Log In" class="mdl-button mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+										Salva Candidatura<span class="mdl-button__ripple-container">
+											<span class="mdl-ripple"></span>
+										</span>
+									</button>
+
+								</div>
+								<input type="hidden" id="userid"/>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+
+
+</div>
+
+<script id="attachment-template" type="text/x-handlebars-template">
+	{{#each attachment}}
+		<tr>
+			<!-- <td class="mdl-data-table__cell--non-numeric">
+				{{createdAt}}
+			</td> -->
+			<td class="mdl-data-table__cell--non-numeric truncate">
+				<a href="{{attributes.url}}" target="_blank">{{attributes.title}}</a>
+			</td>
+			<td class="mdl-data-table__cell--non-numeric">
+				<form class='delete link_button_form' method='post' action='{{id}}'>
+					<input type='hidden' name='_method' value='DELETE' />
+					<input class="mdl-button mdl-button--colored mdl-js-button.mdl-js-ripple-effect link_button" type='submit' value='Elimina' />
+				</form>
+			</td>
+		</tr>
+	{{/each}}
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="material-design-lite/material.min.js"></script>
+<script type="text/javascript" src="js/pickadate.js-3.5.6/lib/compressed/picker.js"></script>
+<script type="text/javascript" src="js/pickadate.js-3.5.6/lib/compressed/picker.date.js"></script>
+<script type="text/javascript" src="js/handlebars-v3.0.3.js"></script>
+<script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="js/profile.js"></script>
+
+<script>
+$( "#iphone_menu" ).click(function() {
+	event.preventDefault();
+  $( ".iphone_menu" ).toggle( "slow" );
+      if ($(this).text() =="MENU")
+         $(this).text("CHIUDI")
+      else
+         $(this).text("MENU");
+ });
+</script>
+
+
+
+
+
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() { // makes sure the whole site is loaded
+			$('#status').fadeOut(); // will first fade out the loading animation
+			$('#preloader').delay(200).fadeOut('slow'); // will fade out the white DIV that covers the website.
+			$('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44602134-1', 'its-ictpiemonte.it');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
