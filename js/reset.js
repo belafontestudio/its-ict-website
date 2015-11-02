@@ -18,11 +18,11 @@ window.onload = function() {
   var id = urlParams['id'];
   document.getElementById('reset').setAttribute('action', base + '/apps/' + id + '/request_password_reset');
   document.getElementById('username').value = urlParams['username'];
-  document.getElementById('username_label').appendChild(document.createTextNode(urlParams['email']));
-
+  document.getElementById('username_label').appendChild(document.createTextNode(urlParams['username']));
+  console.log(document.createTextNode(urlParams['username']));
   document.getElementById('token').value = urlParams['token'];
   if (urlParams['error']) {
     document.getElementById('error').appendChild(document.createTextNode(urlParams['error']));
   }
-  
+
 }

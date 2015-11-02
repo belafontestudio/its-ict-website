@@ -78,12 +78,12 @@ color: white;
 #popup{
   margin: auto;
   position: absolute;
-  top: 20%;
+  top: 10%;
 	left: -20px;
 	right: 0;
   min-height: 20%;
 	max-height: 90%;
-  width: 40%;
+  width: 70%;
   background:#e67e22;
   padding:20px;
   z-index: 5001;
@@ -93,16 +93,17 @@ color: white;
 }
 
 #popup .scroller{
-	margin-bottom: 82px;
+	overflow-y: scroll;
+	margin-bottom: 45px;
 }
 #popup .scroller div{
-	padding: 0.2em;
+	padding: 1em;
 	margin: 0 0 10px 0;
 }
 #popup span{
 
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 16px;
+	line-height: 22px;
 	color: white;
 	text-align: left;
 
@@ -110,14 +111,14 @@ color: white;
 
 #popup h2{
 	text-align: center;
-	font-size: 32px;
-	line-height: 32px;
+	font-size: 28px;
+	line-height: 30px;
 	margin-top: 20px;
 
 }
 
 #popup p{
-padding: 1em;
+padding: 0.2em;
 }
 
 #close{
@@ -203,9 +204,7 @@ h2.pageTitleBandi{
 .accordion dt, .accordion dd {
 	padding: 1em ;
 }
-.accordion dd p,.accordion dd span,.accordion dd li,.accordion dd ol{
-	color: white !important;
-}
+
 .accordion dt{
 	background-color: rgba(255, 255, 255, .05);
 	border-top: 2px solid #9b59b6;
@@ -907,12 +906,19 @@ text-align: center;
 	vertical-align: middle;
 }
 
+#istlogo{
+
+	padding-top: 30px;
+}
 
 .istit{
 	left: 0px;
 	bottom: 10%;
 	max-width: 60px;
+
+	display: inline;
 }
+
 li.erasmus a{
 	font-size: 12px;
 
@@ -1048,7 +1054,6 @@ a.link_bandi{
 	font-weight: 500;
 	line-height: 18px;
 }
-
 
 .icon_pdf {
 	background-size: 19px 27px;

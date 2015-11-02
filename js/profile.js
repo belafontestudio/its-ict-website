@@ -66,6 +66,7 @@ function updateProfile(id,name,surname,courses,date,fiscale,email){
   user.set("username", email);
   user.set("fiscal", fiscale);
   user.set("admin", false);
+  user.set("candidate", true);
   user.set("contact", "website");
   // other fields can be set just like with Parse.Object
   user.save(null, {
