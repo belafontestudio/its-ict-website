@@ -16,6 +16,14 @@
 
 /* #Site Styles
 ================================================== */
+.section .mdl-grid h1{
+  font-size: 32px;
+	margin-bottom: 0;
+}
+
+.section .mdl-grid p b{
+  font-weight: bold;
+}
 
 li.erasmus{
 	padding: 10px;

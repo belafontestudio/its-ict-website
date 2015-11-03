@@ -1,6 +1,9 @@
 Parse.initialize("2RD3MsL6Lf8FgGRkgNNehB0r5RvJRr0km7rZb9VS", "ygZYx64QQISpshuwxWhyQgEKGDnXRtvldz9E0VDA");
 
 $( document ).ready(function() {
+  webshim.setOptions('forms', { addValidators: true });
+  webshims.polyfill();
+
   $('.datepicker').pickadate({
     selectYears: 60,
     firstDay: 1,

@@ -148,6 +148,8 @@ $( "#update" ).submit(function( event ) {
 $( document ).ready(function() {
   isAuthenticated();
   isCandidatesActive();
+  webshim.setOptions('forms', { addValidators: true });
+  webshims.polyfill();
   $('.datepicker').pickadate({
     selectYears: 60,
     firstDay: 1,

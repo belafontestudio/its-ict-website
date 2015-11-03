@@ -67,12 +67,12 @@
 </div>
 
 
-			<div class="mdl-grid demo-content">
-				<div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--5-col mdl-cell--12-col-phone register">
+			<div class="mdl-grid demo-content noflow">
+				<div class="mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--5-col mdl-cell--12-col-phone register fix">
 						<img id="itslogo" src="images/istit/logo-its.png" alt="">
 						<i class="mdl-color-text--blue-grey-400 material-icons">person</i>
-						<p>Profilo</p>
-						<p>Va completato entro la data di chiusura del bando, finchè il bando rimane aperto puoi modificare il tuo profilo</p>
+						<h1>Profilo</h1>
+						<p>Completalo entro la data di chiusura del bando di candidatura, finchè il bando rimane aperto potrai modificare il tuo profilo</p>
 						<form id="update" method="post" action="/login.html">
 							<form id="signup" method="post" action="/registrati.html">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -91,8 +91,8 @@
 									<input id="fiscale" name="fiscale" type="text" class="mdl-textfield__input">
 									<label for="fiscale" class="mdl-textfield__label">Codice fiscale</label>
 								</div>
-								<p>I seguenti documenti sono obbligatori e devono essere caricati: <b>CV, Lettera di accompagnamento</b>
-									carica anche altre certificazioni per ottener eun punteggio migliore</p>
+								<p>I seguenti documenti sono obbligatori e devono essere caricati: <b>CV e Lettera di accompagnamento</b>,
+									carica anche altre certificazioni per ottenere un punteggio migliore</p>
 								<table class="mdl-cell mdl-cell--12-col mdl-data-table mdl-data-table--selectable mdl-shadow--2dp">
 									<thead>
 										<tr>
@@ -115,11 +115,11 @@
 								</div>
 								<div id="courses" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-									  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" value="Mobile App Design" />
+									  <input type="checkbox" data-grouprequired="" name="course" id="checkbox-1" class="mdl-checkbox__input" value="Mobile App Design" />
 									  <span id="checkbox-1-label" class="mdl-checkbox__label">Mobile App Design</span>
 									</label>
 									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-									  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" value="Videomaking" />
+									  <input type="checkbox" data-grouprequired="" name="course" id="checkbox-2" class="mdl-checkbox__input" value="Videomaking" />
 									  <span id="checkbox-2-label" class="mdl-checkbox__label">Videomaking</span>
 									</label>
 								</div>
@@ -171,6 +171,7 @@
 <script type="text/javascript" src="js/pickadate.js-3.5.6/lib/compressed/picker.js"></script>
 <script type="text/javascript" src="js/pickadate.js-3.5.6/lib/compressed/picker.date.js"></script>
 <script type="text/javascript" src="js/handlebars-v3.0.3.js"></script>
+<script type="text/javascript" src="js/js-webshim/minified/polyfiller.js"></script>
 <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
 <script type="text/javascript" src="js/underscore-min.js"></script>
 <script type="text/javascript" src="js/moment-with-locales.min.js"></script>

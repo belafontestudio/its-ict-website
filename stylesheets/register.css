@@ -8,10 +8,15 @@
   top: 10%;
   left: 0;
   right: 0;
+
   min-height: 20%;
   max-height: 90%;
 
   z-index: 1
+}
+.noflow{
+	overflow: hidden;
+	bottom: 0;
 }
 
 .mdl-grid.demo-content p{
@@ -36,6 +41,12 @@ cf:before,
   padding: 17px;
   margin: 0 auto;
 
+
+}
+
+.fix{
+	overflow-y: scroll;
+	height: 100%;
 }
 
 .confirm{
