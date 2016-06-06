@@ -1,0 +1,22 @@
+extends ./layouts/_htmlbp5
+
+block main
+  block iphone_menu
+    include ./partials/_iphone_menu
+  block main_menu
+    include ./partials/_main_menu
+  block section-matching-0
+    include ./partials/_section-matching-0
+  block section-matching-1
+    include ./partials/_section-matching-1
+  block section-matching-2
+    include ./partials/_section-matching-2
+  block section-matching-3
+    include ./partials/_section-matching-3
+  
+  
+  block outdated
+    include ./partials/_outdated
+  
+  block js
+    script(src='/js/home.js').
