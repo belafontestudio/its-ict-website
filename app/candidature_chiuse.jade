@@ -1,0 +1,65 @@
+extends ./layouts/_html5bp
+
+block extra-css
+  link(rel='stylesheet', href='material-design-lite/material.min.css')
+  link(rel='stylesheet', href='stylesheets/material.min.css')
+  link(rel='stylesheet', href='stylesheets/style.css')
+  link(rel='stylesheet', href='js/pickadate.js-3.5.6/lib/compressed/themes/default.css')
+  link(rel='stylesheet', href='js/pickadate.js-3.5.6/lib/compressed/themes/default.date.css')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(rel='stylesheet', href='stylesheets/register.css')
+block main
+  // iphone nav
+  #menu.iphone
+    #logo
+      a(href='#home')
+        img.scale-with-grid(src='images/istit/logo-its.png', alt='')
+      .lingua
+        a.lang(href='index.html') It
+        a.lang2(href='index_en.html') En
+    a#iphone_menu(href='#') MENU
+    ul.iphone_menu
+      li(data-menuanchor='home')
+        a(href='http://www.its-ictpiemonte.it/') Home
+      li.colored(data-menuanchor='registrati')
+        a(href='registrati.html') Registrati
+      li.colored(data-menuanchor='bandi')
+        a(href='bandi.html') Bandi
+  // end iphone nav
+  // main nav
+  ul#menu.group.noiphone
+    #logo
+      a(href='#home')
+        img.scale-with-grid(src='images/istit/logo-its.png', alt='')
+      .lingua
+        a.lang(href='index.html') It
+        a.lang2(href='index_en.html') En
+    li.colored(data-menuanchor='bandi')
+      a(href='bandi.html') Bandi
+    li.colored(data-menuanchor='registrati')
+      a(href='registrati.html') Registrati
+    li(data-menuanchor='home')
+      a(href='http://www.its-ictpiemonte.it/') Home
+  // end main nav
+  #section0.section.full
+    #preloader
+      #status  
+    .mdl-grid.demo-content
+      .mdl-shadow--2dp.mdl-color--white.mdl-cell.mdl-cell--5-col.mdl-cell--12-col-phone.register.confirm
+        img(src='images/folder.png', alt='')
+        h1 Le candidature sono chiuse!
+        p
+          | Contatta info@its-ictpiemonte.it per altre informazioni
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  script(type='text/javascript', src='material-design-lite/material.min.js')
+  script(src='//www.parsecdn.com/js/parse-1.5.0.min.js')
+  script(type='text/javascript', src='js/handlebars-v3.0.3.js')
+  script.
+    $( "#iphone_menu" ).click(function() {
+    event.preventDefault();
+    $( ".iphone_menu" ).toggle( "slow" );
+    if ($(this).text() =="MENU")
+    $(this).text("CHIUDI")
+    else
+    $(this).text("MENU");
+    });

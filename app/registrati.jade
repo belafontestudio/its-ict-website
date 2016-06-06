@@ -1,0 +1,99 @@
+extends ./layouts/_html5bp
+
+block extra-css
+  link(rel='stylesheet', href='material-design-lite/material.min.css')
+  link(rel='stylesheet', href='stylesheets/material.min.css')
+  link(rel='stylesheet', href='stylesheets/style.css')
+  link(rel='stylesheet', href='js/pickadate.js-3.5.6/lib/compressed/themes/default.css')
+  link(rel='stylesheet', href='js/pickadate.js-3.5.6/lib/compressed/themes/default.date.css')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(rel='stylesheet', href='stylesheets/register.css')
+
+block main
+  // iphone nav
+  #menu.iphone
+    #logo
+      a(href='#home')
+        img.scale-with-grid(src='images/istit/logo-its.png', alt='')
+      .lingua
+        a.lang(href='index.html') It
+        a.lang2(href='index_en.html') En
+    a#iphone_menu(href='#') MENU
+    ul.iphone_menu
+      li(data-menuanchor='home')
+        a(href='http://www.its-ictpiemonte.it/') Home
+      li.colored(data-menuanchor='registrati')
+        a(href='registrati.html') Registrati
+      li.colored(data-menuanchor='bandi')
+        a(href='bandi.html') Bandi
+  // end iphone nav
+  // main nav
+  ul#menu.group.noiphone
+    #logo
+      a(href='#home')
+        img.scale-with-grid(src='images/istit/logo-its.png', alt='')
+      .lingua
+        a.lang(href='index.html') It
+        a.lang2(href='index_en.html') En
+    li.colored(data-menuanchor='bandi')
+      a(href='bandi.html') Bandi
+    li.colored(data-menuanchor='registrati')
+      a(href='registrati.html') Registrati
+    li(data-menuanchor='home')
+      a(href='http://www.its-ictpiemonte.it/') Home
+  // end main nav
+  #section0.section.full
+    #preloader
+      #status  
+    .mdl-grid.demo-content
+      .mdl-shadow--2dp.mdl-color--white.mdl-cell.mdl-cell--5-col.mdl-cell--12-col-phone.register
+        img#itslogo(src='images/istit/logo-its.png', alt='')
+        i.mdl-color-text--blue-grey-400.material-icons person
+        h1 Registrati
+        p
+          | Ricevi aggiornamenti su corsi, eventi, iscrizioni, candidarti e tutte le novità di ITS per l’ICT Piemonte.
+        form#signup(method='post', action='/registrati.html')
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#name.mdl-textfield__input(name='name', type='text', required='required')
+            label.mdl-textfield__label(for='name') Nome
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#surname.mdl-textfield__input(name='surname', type='text', required='required')
+            label.mdl-textfield__label(for='surname') Cognome
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#email.mdl-textfield__input(name='email', type='email', required='required')
+            label.mdl-textfield__label(for='email') Email
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            input#password.mdl-textfield__input(name='password', type='password', required='required')
+            label.mdl-textfield__label(for='password') Password
+          .mdl-textfield.mdl-js-textfield
+            input#birthday.mdl-textfield__input.datepicker(name='birthday', type='datetime', required='required')
+            label.birthday.mdl-textfield__label(for='birthday') Data di nascita
+          #courses.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-1')
+              input#checkbox-1.mdl-checkbox__input(type='checkbox', data-grouprequired='', name='course', value='Mobile App Design')
+              span#checkbox-1-label.mdl-checkbox__label Mobile App Design
+            label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-2')
+              input#checkbox-2.mdl-checkbox__input(type='checkbox', data-grouprequired='', name='course', value='Videomaking')
+              span#checkbox-2-label.mdl-checkbox__label Videomaking
+          .button-right
+            button#submit.mdl-button.mdl-button--colored.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect(type='submit', value='Log In')
+              | Registrati
+              span.mdl-button__ripple-container
+                span.mdl-ripple
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  script(type='text/javascript', src='material-design-lite/material.min.js')
+  script(type='text/javascript', src='js/js-webshim/minified/polyfiller.js')
+  script(src='//www.parsecdn.com/js/parse-1.5.0.min.js')
+  script(type='text/javascript', src='js/handlebars-v3.0.3.js')
+  script(type='text/javascript', src='js/pickadate.js-3.5.6/lib/compressed/picker.js')
+  script(type='text/javascript', src='js/pickadate.js-3.5.6/lib/compressed/picker.date.js')
+  script(type='text/javascript', src='js/form.js')
+  script.
+    $( "#iphone_menu" ).click(function() {
+    event.preventDefault();
+    $( ".iphone_menu" ).toggle( "slow" );
+    if ($(this).text() =="MENU")
+    $(this).text("CHIUDI")
+    else
+    $(this).text("MENU");
+    });

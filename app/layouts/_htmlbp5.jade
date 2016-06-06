@@ -1,0 +1,40 @@
+doctype html
+// if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7(lang="en")
+// if IE 7html.no-js.lt-ie9.lt-ie8(lang="en")
+// if IE 8html.no-js.lt-ie9(lang="en")
+//if gt IE 8
+  | [if gt IE 8]
+
+html.no-js(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(content="IE=edge,chrome=1", http-equiv="X-UA-Compatible")
+    title ITS - ICT Piemonte
+    meta(name='author', content='Luca Troisi')
+    meta(name='description', content='lorem ipsum')
+    meta(name='keywords', content='lorem ipsum')
+    meta(name='Resource-type', content='Document')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='stylesheet', type='text/css', href='stylesheets/jquery.fullPage.css')
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700,800', rel='stylesheet', type='text/css')
+    link(rel='stylesheet',type='text/css',  href='stylesheets/base.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/skeleton.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/layout.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/outdatedBrowser.min.css')
+    link(rel='stylesheet', type='text/css', href='stylesheets/form.css')
+    script(src='js/modernizr.custom.js')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    block extra-css
+    
+    //- link(href="css/vendor.css",type='text/css',  rel="stylesheet")
+    //- link(href="css/app.css",type='text/css',  rel="stylesheet")
+  body
+    block main
+      | Main
+    block scripts
+      include ../partials/_js
+    block js
+      | Extra js
+    block analytics
+      include ../partials/_analytics
+    
