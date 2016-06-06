@@ -65,13 +65,14 @@ li.erasmus a{
 }
 
 .lingua{
-width: 200px;
+/*width: 200px;*/
 margin-top: -25px;
-margin-left: 80px;
+margin-left: 65px;
 }
 
 .lang{
 color: white!important;
+padding-right: 8px;
 }
 
 .lang2{
@@ -741,7 +742,7 @@ p.corso{
 }
 
 .bodycopy{
-	color: white;
+	color: #212121;
 	font-size: 16px;
 	line-height: 20px;
 }
@@ -860,6 +861,7 @@ p.corso{
 
 .controlArrow {
 	top: 60%;
+  z-index: 10000 !important;
 }
 
 .controlArrow.prev {
@@ -869,6 +871,7 @@ p.corso{
     border-color: transparent #fff transparent transparent;
 }
 .controlArrow.next {
+    z-index: 10000 !important;
     right: 15px;
     border-width: 14px 0 14px 14px;
     border-color: transparent transparent transparent #fff;
@@ -898,7 +901,7 @@ p.corso{
 font-family: 'Raleway',sans-serif, helvetica;
 font-weight: 700;
 color: white;
-padding: 0 43%;
+padding: 0 calc(100% - 65px);
 /*margin: 0 50%;*/
 line-height: 50px;
 text-align: center;
@@ -1033,7 +1036,7 @@ a.link_bandi{
 }
 
 .scale-with-grid2{
-	width:40%;
+	width:90%;
 }
 
 

@@ -15,24 +15,24 @@ var gulp        = require('gulp'),
     path        = require('path'),
     server      = tinylr(),
     es          = require('event-stream');
-var jeet        = require('jeet');
-var rupture     = require('rupture');
+    rupture     = require('rupture');
+
 
 
 
 // --- Basic Tasks ---
-gulp.task('css', function() {
-  var options = {
-        use: [ jeet(), rupture()]
-    };
-
-  return gulp.src('app/assets/css/*.styl').
-    pipe( styl(options) ).
-    pipe( csso() ).
-    pipe( concat('style.min.css')).
-    pipe( gulp.dest('public/css/') ).
-    pipe( livereload( server ));
-});
+// gulp.task('css', function() {
+//   var options = {
+//         use: [ lost(), rupture()]
+//     };
+//
+//   return gulp.src('app/assets/css/*.styl').
+//     pipe( styl(options) ).
+//     pipe( csso() ).
+//     pipe( concat('style.min.css')).
+//     pipe( gulp.dest('public/css/') ).
+//     pipe( livereload( server ));
+// });
 
 gulp.task('js', function() {
   return es.merge(

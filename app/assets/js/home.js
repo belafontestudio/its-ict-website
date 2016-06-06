@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var pepe = $.fn.fullpage({
   verticalCentered: true,
   slidesColor: ['#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B'],
@@ -11,24 +12,28 @@ $(document).ready(function() {
   slidesNavPosition: 'bottom',
   loopHorizontal: false,
   touchSensitivity: 10,
-  scrollOverflow: false,
-  autoScrolling: false,
+  //autoScrolling: false,
+  scrollOverflow: true,
   css3: true
   });
-  //plugin function, place inside DOM ready function
-  outdatedBrowser({
-  bgColor: '#3f3f3f',
-  color: '#fff',
-  lowerThan: 'IE10'
-  });
+
+
+  // //plugin function, place inside DOM ready function
+  // outdatedBrowser({
+  // bgColor: '#3f3f3f',
+  // color: '#fff',
+  // lowerThan: 'IE10'
+  // });
 
   $("#close").click(function(){
     $("#popup").fadeOut();
     $(".topintro").css( "margin-top", "10%");
   });
 
+  console.log('preiphone');
   $( "#iphone_menu" ).click(function() {
     event.preventDefault();
+    console.log('iphone_menu');
     $( ".iphone_menu" ).toggle( "slow" );
     if ($(this).text() =="MENU"){
       $(this).text("CHIUDI")
