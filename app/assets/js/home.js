@@ -41,6 +41,12 @@ $(document).ready(function() {
       $(this).text("MENU");
     }
   });
+
+
+  $('.career-open').click(function(){
+    $('.career-switch-container').toggle();
+  })
+
 });
 
 $(window).load(function() { // makes sure the whole site is loaded

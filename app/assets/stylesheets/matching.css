@@ -6,8 +6,28 @@ html{
   font-family: "Raleway", Arial, sans-serif !important;
 }
 
+input:focus{
+  width:100%;
+  height: auto;
+  background: none;
+  border: 0;
+}
+
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label{
+  color: #FF5722;
+}
+
+
+h3{
+  margin-top:0;
+}
+
 .matching-title{
   margin-top: 50px;
+}
+
+.matching-title .row{
+  margin: 0 !important;
 }
 
 .matching-title h2{
@@ -31,6 +51,13 @@ html{
   color: #FF5722;
 }
 
+@media screen and (max-width: 767px){
+  .career-switch-container{
+    display: none;
+    margin-bottom: 14px;
+  }
+}
+
 
 @media screen and (min-width: 768px){
   .career-arrow{
@@ -52,7 +79,9 @@ html{
 
 
 .career-01-wrapper{
-  background-color: tomato;
+  background-image:url('../images/sfondo-matching-1.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .career-01-wrapper h1{
@@ -88,13 +117,31 @@ html{
   margin-bottom: 10px;
 }
 
-.mdl-button{
+.mdl-button-sito{
   position: absolute;
   right: 10px;
   bottom: 10px;
+  background-color: #FF5722 !important;
+  padding:0 20px;
 }
 
 @media screen and (min-width: 768px){
+
+  .career-01-wrapper{
+    padding:100px 0;
+  }
+
+  .career-02-wrapper{
+    padding:100px 0;
+  }
+
+  .career-01-wrapper h1{
+    font-size: 68px;
+    font-weight: 400;
+
+
+  }
+
   .career-form{
 
     padding: 25px 25px 60px 25px;
@@ -105,4 +152,76 @@ html{
     color: black;
     position: relative;
   }
+
+
+  .mdl-button-sito{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+  }
+
+}
+
+
+/*           2            */
+
+.career-02-wrapper{
+    background-image:url('../images/sfondo-matching-2.png');
+    background-position: center;
+    background-size: cover;
+
+}
+
+.mdl-radio{
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+/*                        £                */
+
+.line-bottom{
+  border-bottom: 1px solid lightgrey;
+}
+
+.career-profile{
+  margin-bottom: 30px !important;
+}
+
+.career-profile-head-pic{
+  margin-bottom: 23px;
+
+}
+
+.career-profile-head-pic img{
+  max-width: 85px;
+
+}
+
+.career-profile-head-name p{
+  font-size: 24px;
+}
+
+.mdl-button-profile{
+  background-color: #FF5722 !important;
+  width: 100%;
+  margin-top:20px;
+}
+.career-profile-bio-title p{
+  color: #727272;
+}
+.career-profile-bio-main{
+  font-style: italic;
+}
+
+.career-profile-skills ul li{
+  background-color: #CFD8DC;
+  color: #727272;
+  padding: 8px 15px;
+  margin-right: 10px;
+  display: inline-block;
 }
