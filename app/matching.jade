@@ -1,5 +1,10 @@
 extends ./layouts/_htmlbp5
 
+block extra-css
+  link(rel='stylesheet', href='material-design-lite/material.min.css')
+  link(rel='stylesheet', href='stylesheets/material.min.css')
+  link(rel='stylesheet', href='stylesheets/matching.css')
+
 block main
   block iphone_menu
     include ./partials/_iphone_menu
@@ -19,4 +24,5 @@ block main
     include ./partials/_outdated
   
   block js
+    script(type='text/javascript', src='material-design-lite/material.min.js')
     script(src='/js/home.js').

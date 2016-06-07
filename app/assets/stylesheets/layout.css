@@ -761,11 +761,11 @@ p.corso{
 }
 
 #video2{
-	background-image: url(../images/bg4v_ipad.jpg);
+	background-image: url(../images/bg4v_ipad.png);
 }
 
 #video3{
-	background-image: url(../images/bg5v_ipad.jpg);
+	background-image: url(../images/bg5v_ipad.png);
 }
 
 #video4{
@@ -1075,13 +1075,13 @@ a.link_bandi{
 #mobile3,
 #video3{
 	background-image: none;
-	background-color: #AF2525;
+	background-color: #455A64;
 }
 
 #mobile4,
 #video4{
 	background-image: none;
-	background-color: #7C1A1A;
+	background-color: #455A64;
 }
 
 

@@ -1,0 +1,108 @@
+html{
+  overflow: scroll !important;
+}
+
+*{
+  font-family: "Raleway", Arial, sans-serif !important;
+}
+
+.matching-title{
+  margin-top: 50px;
+}
+
+.matching-title h2{
+  font-size: 18px;
+  margin: 0;
+}
+
+.career-arrow{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+
+}
+
+.career-switch{
+  display: block;
+  padding: 7px 0;
+  color: black;
+}
+.career-switch:hover{
+  color: #FF5722;
+}
+
+
+@media screen and (min-width: 768px){
+  .career-arrow{
+    display: none;
+  }
+  .career-switch-container{
+    position:absolute;
+    right: 0;
+
+  }
+  .career-switch{
+    display: inline-block;
+    padding: 12px 0 0 11px;
+  }
+}
+
+
+/*                 01          */
+
+
+.career-01-wrapper{
+  background-color: tomato;
+}
+
+.career-01-wrapper h1{
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.career-form{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px 10px 60px 10px;
+  margin-bottom: 30px;
+  margin-left: -10px;
+  /*padding: 25px 42px;*/
+  color: black;
+  position: relative;
+}
+.corso-form{}
+
+.career-form h3{
+  font-size: 20px;
+  line-height: 26px;
+
+}
+
+.mdl-textfield{
+  max-width: 100%;
+  width: 100%;
+  /*padding: 7px 0;*/
+}
+
+.mdl-checkbox{
+  margin-bottom: 10px;
+}
+
+.mdl-button{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 768px){
+  .career-form{
+
+    padding: 25px 25px 60px 25px;
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-top: 25px;
+    /*padding: 25px 42px;*/
+    color: black;
+    position: relative;
+  }
+}
