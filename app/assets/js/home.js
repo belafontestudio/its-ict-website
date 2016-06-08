@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('#fullpage').fullpage({
+  var pepe = $.fn.fullpage({
   verticalCentered: true,
   slidesColor: ['#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B'],
   anchors: ['home','campus', 'mobile', 'coding','video', 'aziende', 'contatti'],
