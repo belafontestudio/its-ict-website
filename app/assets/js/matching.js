@@ -7,7 +7,7 @@ var studentsList;
 function getTemplate(studentsList){
   var source   = $("#student-template").html();
   var template = Handlebars.compile(source);
-
+  console.log(studentsList);
   var html= template({student:studentsList});
   $('#students').append(html);
 
