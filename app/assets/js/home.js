@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var pepe = $.fn.fullpage({
+  $('#fullpage').fullpage({
   verticalCentered: true,
   slidesColor: ['#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B'],
   anchors: ['home','campus', 'mobile', 'coding','video', 'aziende', 'contatti'],
@@ -14,7 +14,7 @@ $(document).ready(function() {
   loopHorizontal: false,
   touchSensitivity: 10,
   lockAnchors: true,
-  //autoScrolling: false,
+  autoScrolling: false,
   scrollOverflow: true,
   css3: true
   });
@@ -48,6 +48,27 @@ $(document).ready(function() {
   $('.career-open').click(function(){
     $('.career-switch-container').toggle();
   })
+
+  $("#switch-1").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".career-01-wrapper").offset().top
+    }, 1500);
+  });
+
+  $("#switch-2").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".career-02-wrapper").offset().top
+    }, 1500);
+  });
+
+
+  $("#richiedi, #visiona").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $(".career-03-wrapper").offset().top
+    }, 1000);
+  });
+
 
 });
 

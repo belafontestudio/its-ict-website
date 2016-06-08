@@ -17,15 +17,24 @@
 /* #Site Styles
 ================================================== */
 
+.fp-section,
+.fp-slide,
+.fp-tableCell{
+    height: auto !important;
+}
+
+
 .grey{
   background-color: #607D8B !important;
 }
 
 .controlArrow.prev{
+  z-index: 10000 !important;
   border-color: transparent #FF5722 transparent transparent;
 }
 
 .controlArrow.next{
+  z-index: 10000 !important;
   border-color: transparent transparent transparent #FF5722;
 }
 
@@ -633,6 +642,16 @@ p.corso{
 	background-size: cover;
 }
 
+#mobile1{
+  background-image: url(../images/bg_mob.jpeg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 #mobile2{
 	background-image: url(../images/bg4.png);
 	background-repeat: no-repeat;
@@ -664,6 +683,16 @@ p.corso{
 }
 
 
+#coding1{
+  background-image: url(../images/bg_code.jpeg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 #aziende2{
 	background-image: url(../images/bg7.jpg);
 	background-repeat: no-repeat;
@@ -673,6 +702,16 @@ p.corso{
 	-o-background-size: cover;
 	background-size: cover;
 }
+#video1{
+  background-image: url(../images/bg_vid.jpeg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 
 #video2{
 	background-image: url(../images/bg4v.png);
