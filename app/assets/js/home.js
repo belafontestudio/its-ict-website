@@ -14,7 +14,7 @@ $(document).ready(function() {
   loopHorizontal: false,
   touchSensitivity: 10,
   lockAnchors: true,
-  //autoScrolling: false,
+  autoScrolling: false,
   scrollOverflow: true,
   css3: true
   });
@@ -45,9 +45,8 @@ $(document).ready(function() {
   });
 
 
-  $('.career-open').click(function(){
-    $('.career-switch-container').toggle();
-  })
+
+
 
 });
 

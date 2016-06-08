@@ -1,7 +1,7 @@
 extends ./layouts/_htmlbp5
 
 block extra-css
-  link(rel='stylesheet', href='material-design-lite/material.min.css')
+  link(rel='stylesheet', href='https://code.getmdl.io/1.1.3/material.deep_orange-indigo.min.css')
   link(rel='stylesheet', href='stylesheets/material.min.css')
   link(rel='stylesheet', href='stylesheets/matching.css')
 
@@ -31,6 +31,8 @@ block scripts
   script(type='text/javascript', src='js/js-webshim/minified/polyfiller.js').
   script(src='//www.parsecdn.com/js/parse-1.5.0.min.js').
   script(type='text/javascript', src='js/underscore-min.js').
+    //- script(type='text/javascript', src='js/home.js').
+    
   script#student-template(type='text/x-handlebars-template').
     {{#each student}}
       <div class="row line-bottom">
