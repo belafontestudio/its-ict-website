@@ -1,0 +1,65 @@
+extends ./layouts/_html5bp
+
+block main
+  // iphone nav
+  #menu.iphone
+    #logo
+      a(href='#home')
+        img.scale-with-grid(src='images/istit/logo-its.png', alt='')
+      .lingua
+        a.lang(href='index.html') It
+        a.lang2(href='index_en.html') En
+    a#iphone_menu(href='#') MENU
+    ul.iphone_menu
+      li(data-menuanchor='home')
+        a(href='http://www.its-ictpiemonte.it/') Home
+      li.colored(data-menuanchor='registrati')
+        a(href='registrati.html') Registrati
+      li.colored(data-menuanchor='bandi')
+        a(href='bandi.html') Bandi
+  // end iphone nav
+  // main nav
+  ul#menu.group.noiphone
+    #logo
+      a(href='#home')
+        img.scale-with-grid(src='images/istit/logo-its.png', alt='')
+      .lingua
+        a.lang(href='index.html') It
+        a.lang2(href='index_en.html') En
+    li.colored(data-menuanchor='bandi')
+      a(href='bandi.html') Bandi
+    li.colored(data-menuanchor='registrati')
+      a(href='registrati.html') Registrati
+    li(data-menuanchor='home')
+      a(href='http://www.its-ictpiemonte.it/') Home
+  // end main nav
+  #section0.section.full
+    #preloader
+      #status  
+    .mdl-grid.demo-content
+      .mdl-shadow--2dp.mdl-color--white.mdl-cell.mdl-cell--5-col.mdl-cell--12-col-phone.register
+        img#itslogo(src='images/istit/logo-its.png', alt='')
+        i.mdl-color-text--blue-grey-400.material-icons backup
+        form#userfileupload(name='userfileupload', enctype='multipart/form-data', method='post')
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.mdl-cell--12-col
+            input#usertitle.mdl-textfield__input(name='title', type='text')
+            label.mdl-textfield__label(for='title') Titolo
+          fieldset.float-l
+            input#userfileselect.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect(type='file', name='fileselect')
+          .button-righest
+            button#useruploadfile.mdl-button.mdl-button--colored.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect(type='submit', value='Carica PDF', disabled='') Carica PDF
+          #loader.mdl-progress.mdl-js-progress.mdl-progress__indeterminate.mdl-cell--12-col
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  script(type='text/javascript', src='material-design-lite/material.min.js')
+  script(type='text/javascript', src='js/underscore-min.js')
+  script(src='//www.parsecdn.com/js/parse-1.5.0.min.js')
+  script(type='text/javascript', src='js/add_pdf.js')
+  script.
+    $( "#iphone_menu" ).click(function() {
+    event.preventDefault();
+    $( ".iphone_menu" ).toggle( "slow" );
+    if ($(this).text() =="MENU")
+    $(this).text("CHIUDI")
+    else
+    $(this).text("MENU");
+    });
