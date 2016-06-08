@@ -8,10 +8,12 @@ $(document).ready(function() {
   fixedElements: '#menu',
   navigation:true,
   navigationPosition: 'left',
+  navigationTooltips: ['Home','Campus', 'Mobile', 'Coding','Video', 'Aziende', 'Contatti'],
   slidesNavigation: true,
   slidesNavPosition: 'bottom',
   loopHorizontal: false,
   touchSensitivity: 10,
+  lockAnchors: true,
   //autoScrolling: false,
   scrollOverflow: true,
   css3: true
