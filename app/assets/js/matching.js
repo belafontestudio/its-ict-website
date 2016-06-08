@@ -7,21 +7,17 @@ var studentsList;
 function getTemplate(studentsList){
   var source   = $("#student-template").html();
   var template = Handlebars.compile(source);
+
   var html= template({student:studentsList});
   $('#students').append(html);
 
 }
 
 function eachStudent(students){
-  $( students ).each(function( index,student ) {
-    // getAttachments(index,tender,column);
-    studentCounter += 1;
-    if(studentCounter == totalStudents){
-      getTemplate(studentsList);
-    }
-    console.log("studentCounter "+studentCounter);
-  });
   studentsList = students;
+
+  getTemplate(studentsList);
+
   totalStudents = students.length;
   console.log("totalStudents "+totalStudents);
 }
@@ -31,10 +27,11 @@ function getStudents(){
 
   var query = new Parse.Query(Student);
   // query.equalTo("active", status);
-  // query.descending("createdAt");
+  query.descending("createdAt");
   query.find({
     success: function(students) {
       eachStudent(students);
+
     },
     error: function(error) {
       alert("Error: " + error.code + " " + error.message);
