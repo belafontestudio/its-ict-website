@@ -42,7 +42,7 @@ function getStudents(){
 getStudents();
 
 
-$(document).ready(function{
+$(document).ready(function(){
     $('.career-open').click(function(){
       $('.career-switch-container').toggle();
     })
