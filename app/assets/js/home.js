@@ -15,11 +15,11 @@ jQuery(document).ready(function($) {
   slidesNavPosition: 'bottom',
   loopHorizontal: false,
   touchSensitivity: 10,
-  // lockAnchors: true,
-  autoScrolling: false,
-  fitToSection: false,
-  // scrollOverflow: true,
-  // normalScrollElements: '#mobile5',
+  lockAnchors: true,
+  autoScrolling: true,
+  // fitToSection: false,
+  scrollOverflow: true,
+  normalScrollElements: '#mobile5',
   css3: true
   });
 
