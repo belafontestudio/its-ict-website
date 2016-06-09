@@ -2,6 +2,7 @@ extends ./layouts/_htmlbp5
 
 block extra-css
   link(rel='stylesheet', href='https://code.getmdl.io/1.1.3/material.deep_orange-indigo.min.css')
+  link(rel='stylesheet', href='stylesheets/material.min.css')
   link(rel='stylesheet', href='stylesheets/matching.css')
 
 block main
@@ -22,55 +23,53 @@ block main
   block outdated
     include ./partials/_outdated
   
-  block scripts
-    script(type='text/javascript', src='material-design-lite/material.min.js').
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js').
+block scripts
+  script(type='text/javascript', src='material-design-lite/material.min.js').
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js').
 
-    script(type='text/javascript', src='js/handlebars-v3.0.3.js').
-    script(type='text/javascript', src='js/js-webshim/minified/polyfiller.js').
-    script(src='//www.parsecdn.com/js/parse-1.5.0.min.js').
-    script(type='text/javascript', src='js/underscore-min.js').
+  script(type='text/javascript', src='js/handlebars-v3.0.3.js').
+  script(type='text/javascript', src='js/js-webshim/minified/polyfiller.js').
+  script(src='//www.parsecdn.com/js/parse-1.5.0.min.js').
+  script(type='text/javascript', src='js/underscore-min.js').
     //- script(type='text/javascript', src='js/home.js').
     
-    script#student-template(type='text/x-handlebars-template').
-      {{#each student}}
-        <div class="row line-bottom">
-          <div class="three columns career-profile career-profile-head">
-              <div class="career-profile-head-pic">
-                  <img src="http://placehold.it/80x80" alt="">
-                  </div>
-                  <div class="career-profile-head-name">
-                      <p>{{attributes.name}} {{attributes.surname}}</p>
-                  </div>
-                  <div class="career-profile-head-button">
-                      <button class="mdl-button mdl-button-profile mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">Contatta
-                          <span class="mdl-button__ripple-container">
-                              <span class="mdl-ripple"></span>
-                          </span>
-                      </button>
-                  </div>
-              </div>
-              <div class="seven columns career-profile career-profile-bio">
-                  <div class="career-profile-bio-title">
-                      <p>Bio</p>
-                  </div>
-                  <div class="career-profile-bio-main">
-                      <p>{{attributes.bio}}</p>
-                  </div>
-              </div>
-              <div class="six columns career-profile career-profile-skills">
-                  <div class="career-profile-bio-title">
-                      <p>Skills</p>
-                  </div>
-                  <ul>
-                      <li>UX Design</li>
-                      <li>Graphic Design</li>
-                      <li>HTML</li>
-                      <li>Gatto</li>
-                      <li>Cane</li>
-                  </ul>
+  script#student-template(type='text/x-handlebars-template').
+    {{#each student}}
+      <div class="row line-bottom">
+        <div class="three columns career-profile career-profile-head">
+            <div class="career-profile-head-pic">
+                <img src="{{attributes.portrait._url}}" alt="student portrait" />
+                </div>
+                <div class="career-profile-head-name">
+                    <p>{{attributes.name}} {{attributes.surname}}</p>
+                </div>
+                <div class="career-profile-head-button">
+                    <button class="mdl-button mdl-button-profile mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">Contatta
+                        <span class="mdl-button__ripple-container">
+                            <span class="mdl-ripple"></span>
+                        </span>
+                    </button>
+                </div>
             </div>
-        </div>
-      {{/each}}
-    script(src='/js/matching.js').
-    
+            <div class="seven columns career-profile career-profile-bio">
+                <div class="career-profile-bio-title">
+                    <p>Bio</p>
+                </div>
+                <div class="career-profile-bio-main">
+                    <p>{{attributes.bio}}</p>
+                </div>
+            </div>
+            <div class="six columns career-profile career-profile-skills">
+                <div class="career-profile-bio-title">
+                    <p>Skills</p>
+                </div>
+                <ul>
+                  {{#each attributes.skills}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+          </div>
+      </div>
+    {{/each}}
+  script(src='/js/matching.js').
+  
