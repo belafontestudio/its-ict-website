@@ -17,34 +17,45 @@
 /* #Site Styles
 ================================================== */
 
-.fp-section,
+/*.fp-section,
 .fp-slide,
 .fp-tableCell{
     height: auto !important;
-}
+}*/
 
 
 .grey{
   background-color: #607D8B !important;
 }
 
-.controlArrow.prev{
+.fp-controlArrow {
+	top: calc(50% + 120px) !important;
+  z-index: 10000 !important;
+}
+
+.fp-controlArrow.fp-prev{
   z-index: 10000 !important;
   border-color: transparent #FF5722 transparent transparent;
+  left: 20px;
+  width: 0;
+  border-width: 14px 14px 14px 0;
 }
 
-.controlArrow.next{
+.fp-controlArrow.fp-next{
   z-index: 10000 !important;
   border-color: transparent transparent transparent #FF5722;
+  z-index: 10000 !important;
+  right: 20px;
+  border-width: 14px 0 14px 14px;
 }
 
-#fullPage-nav span, .fullPage-slidesNav span{
+#fp-nav span, .fp-slidesNav span{
   border-color: #455A64;
 
 }
-#fullPage-nav li .active span, .fullPage-slidesNav .active span{
-  background: #FF5722;
-  border-color: #FF5722;
+#fp-nav li .active span, .fp-slidesNav .active span{
+  background: #FF5722 !important;
+  border-color: #FF5722 !important;
 }
 .container{
   z-index: 1;
@@ -554,11 +565,19 @@ p.corso{
 
 }
 
+@media screen and (max-width: 767px){
+  #fp-nav.left {
+      left: 4px;
+  }
+}
+
 @media screen and (min-width: 768px){
   #menu li.colored{
     margin-right: 10px;
   }
 }
+
+
 
 #menu li a,
 #menu li.active a{
@@ -693,6 +712,15 @@ p.corso{
 	background-size: cover;
 }
 
+#mobile5{
+  background-color: #607D8B;
+}
+
+
+#coding5{
+  background-color: #607D8B;
+}
+
 #aziende2{
 	background-image: url(../images/bg7.jpg);
 	background-repeat: no-repeat;
@@ -742,6 +770,10 @@ p.corso{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+#video5{
+  background-color: #607D8B;
 }
 
 #aziende4{
@@ -939,23 +971,6 @@ p.corso{
 	margin-top: 10px;
 }
 
-.controlArrow {
-	top: 60%;
-  z-index: 10000 !important;
-}
-
-.controlArrow.prev {
-    left: 15px;
-    width: 0;
-    border-width: 14px 14px 14px 0;
-    border-color: transparent #fff transparent transparent;
-}
-.controlArrow.next {
-    z-index: 10000 !important;
-    right: 15px;
-    border-width: 14px 0 14px 14px;
-    border-color: transparent transparent transparent #fff;
-}
 
 #logo{
 	position:fixed;

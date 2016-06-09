@@ -66,4 +66,17 @@ $(document).ready(function(){
           scrollTop: $(".career-03-wrapper").offset().top
       }, 1000);
     });
+
+
+    $( "#iphone_menu" ).click(function() {
+      event.preventDefault();
+      console.log('iphone_menu');
+      $( ".iphone_menu" ).toggle( "slow" );
+      if ($(this).text() =="MENU"){
+        $(this).text("CHIUDI")
+      }else{
+        $(this).text("MENU");
+      }
+    });
+
 })

@@ -1,6 +1,8 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
-  var pepe = $.fn.fullpage({
+  console.log('ready');
+
+  $('#fullpage').fullpage({
   verticalCentered: true,
   slidesColor: ['#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B'],
   anchors: ['home','campus', 'mobile', 'coding','video', 'aziende', 'contatti'],
@@ -13,9 +15,11 @@ $(document).ready(function() {
   slidesNavPosition: 'bottom',
   loopHorizontal: false,
   touchSensitivity: 10,
-  lockAnchors: true,
+  // lockAnchors: true,
   autoScrolling: false,
-  scrollOverflow: true,
+  fitToSection: false,
+  // scrollOverflow: true,
+  // normalScrollElements: '#mobile5',
   css3: true
   });
 
