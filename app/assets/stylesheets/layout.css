@@ -66,7 +66,7 @@
   left:0;
   bottom: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.6);;
+  background: rgba(255, 255, 255, 0.4);;
 }
 
 .section .mdl-grid h1{
@@ -180,6 +180,7 @@ a:hover span{
 	font-size: 28px;
 	line-height: 30px;
 	margin-top: 20px;
+  color: white;
 
 }
 
@@ -190,7 +191,8 @@ padding: 0.2em;
 #close{
   position:absolute;
   background:#FF5722;
-  color:white;
+  color:white !important;
+  font-weight: bold;
   left:0;
   bottom:0;
   width:100%;
@@ -203,6 +205,7 @@ padding: 0.2em;
  text-align:center;
  font-size:1em;
  cursor:pointer;
+ color: white;
  }
 
 
@@ -217,7 +220,9 @@ padding: 0.2em;
 
 h2.pageTitleBandi{
 	padding: 0;
-	padding-top: 60px;	}
+	padding-top: 60px;
+  color: white;
+	}
 
 #bandi{
 	width: auto;
@@ -226,10 +231,12 @@ h2.pageTitleBandi{
 
 .bandiAperti{
 	margin-right: 2%;
+  color: white;
 }
 
 .bandiChiusi{
 	margin-left: 2%;
+  color: white;
 }
 
 .bandiaperti{
@@ -239,6 +246,7 @@ h2.pageTitleBandi{
 	margin-left: 20px;
 	margin-bottom: 10px;
 	margin-top: 28px;
+  color: white;
 }
 
 .bandichiusi {
@@ -248,6 +256,7 @@ h2.pageTitleBandi{
 	margin-left: 20px;
 	margin-bottom: 8px;
 	margin-top: 28px;
+  color: white;
 
 }
 
@@ -273,7 +282,7 @@ h2.pageTitleBandi{
 
 .accordion dt{
 	background-color: rgba(255, 255, 255, .05);
-	border-top: 2px solid #9b59b6;
+	border-top: 2px solid #FF5722;
 }
 
 .accordion dt a, .accordion dd a {
@@ -331,11 +340,11 @@ a.link_bandi{
 	font-size: 0.7em;
 }
 #bandibody{
-	background-color: #9b59b6;
+	background-color: #455A64;
 }
 #sectionbandi{
   height: 100%;
-	background-color: #9b59b6;
+	background-color: #455A64;
 
 }
 
@@ -892,6 +901,7 @@ p.corso{
 
 #popup h2{
 	font-size: 24px;
+  color: white;
 }
 
 #popup span{
@@ -927,6 +937,7 @@ p.corso{
 	padding: 0.2em ;
 	font-size: 14px;
 	line-height: 1.1em;
+  color: white;
 }
 
 #popup p{

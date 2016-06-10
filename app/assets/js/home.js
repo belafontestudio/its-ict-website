@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
   touchSensitivity: 10,
   lockAnchors: true,
   autoScrolling: true,
-  // fitToSection: false,
+  fitToSection: false,
   scrollOverflow: true,
   normalScrollElements: '#mobile5',
   css3: true
