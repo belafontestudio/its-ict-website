@@ -22,7 +22,7 @@ var getProps = {
 	ended: false,
 	currentSrc: '',
 	duration: window.NaN,
-	
+
 	readyState: 0,
 	networkState: 0,
 	videoHeight: 0,
@@ -56,7 +56,7 @@ var getSetProps = {
 
 var playerStateObj = $.extend({
 	isActive: 'html5',
-	activating: 'html5',	
+	activating: 'html5',
 	wasSwfReady: false,
 	_metadata: false,
 	_callMeta: false,
@@ -75,7 +75,7 @@ var resetSwfProps = (function(){
 	var resetProtoProps = ['_buffered', '_metadata', '_ppFlag', 'currentSrc', 'currentTime', 'duration', 'ended', 'networkState', 'paused', 'videoHeight', 'videoWidth', '_callMeta'];
 	var len = resetProtoProps.length;
 	return function(data){
-		
+
 		if(!data){return;}
 		var lenI = len;
 		var networkState = data.networkState;
@@ -113,7 +113,7 @@ var getComputedDimension = (function(){
 						width: this.width,
 						height: this.height
 					};
-					
+
 					if(dimCache[poster].height && dimCache[poster].width){
 						setElementDimension(data, $.prop(data._elem, 'controls'));
 					} else {
@@ -129,12 +129,12 @@ var getComputedDimension = (function(){
 		}
 		return ret || {width: 300, height: data._elemNodeName == 'video' ? 150 : 50};
 	};
-	
+
 	var getCssStyle = function(elem, style){
 		return elem.style[style] || (elem.currentStyle && elem.currentStyle[style]) || (window.getComputedStyle && (window.getComputedStyle( elem, null ) || {} )[style]) || '';
 	};
 	var minMaxProps = ['minWidth', 'maxWidth', 'minHeight', 'maxHeight'];
-	
+
 	var addMinMax = function(elem, ret){
 		var i, prop;
 		var hasMinMax = false;
@@ -158,11 +158,11 @@ var getComputedDimension = (function(){
 			width: !autos.width && $(elem).width(),
 			height: !autos.height && $(elem).height()
 		};
-		
+
 		if(autos.width || autos.height){
 			videoDims = getVideoDims(data);
 			ratio = videoDims.width / videoDims.height;
-			
+
 			if(autos.width && autos.height){
 				ret.width = videoDims.width;
 				ret.height = videoDims.height;
@@ -171,12 +171,12 @@ var getComputedDimension = (function(){
 			} else if(autos.height){
 				ret.height = ret.width / ratio;
 			}
-			
+
 			if(addMinMax(elem, ret)){
 				data.shadowElem.css(ret);
 				if(autos.width){
 					ret.width = data.shadowElem.height() * ratio;
-				} 
+				}
 				if(autos.height){
 					ret.height = ((autos.width) ? ret.width :  data.shadowElem.width()) / ratio;
 				}
@@ -184,17 +184,17 @@ var getComputedDimension = (function(){
 					data.shadowElem.css(ret);
 					ret.height = data.shadowElem.width() / ratio;
 					ret.width = ret.height * ratio;
-					
+
 					data.shadowElem.css(ret);
 					ret.width = data.shadowElem.height() * ratio;
 					ret.height = ret.width / ratio;
-					
+
 				}
 			}
 		}
 		return ret;
 	};
-	
+
 	return retFn;
 })();
 
@@ -205,7 +205,7 @@ var setElementDimension = function(data){
 		if(data && data._ytAPI && data._ytAPI.getPlaybackQuality){
 			window.ytapi = data._ytAPI;
 		}
-		
+
 		data._elem.style.display = '';
 		dims = getComputedDimension(data);
 		data._elem.style.display = 'none';
@@ -226,7 +226,7 @@ var getYtDataFromElem = function(elem){
 var qualReg = /vq\=(small|medium|large|hd720|hd1080|highres)/i;
 var getYtParams = function(src){
 	var found;
-	var qual = (src.match(qualReg) || ['', ''])[1].toLowerCase();;
+	var qual = (src.match(qualReg) || ['', ''])[1].toLowerCase();
 	src = src.split('?');
 	if(src[0].indexOf('youtube.com/watch') != -1 && src[1]){
 		src = src[1].split('&');
@@ -245,7 +245,7 @@ var getYtParams = function(src){
 				src = name;
 				return false;
 			}
-			
+
 			if(name == 'v'){
 				found = true;
 			}
@@ -283,7 +283,7 @@ var addMediaToStopEvents = $.noop;
 	var hidevents = hideEvtArray.map(function(evt){
 		return evt +'.webshimspolyfill';
 	}).join(' ');
-	
+
 	var hidePlayerEvents = function(event){
 		var data = webshims.data(event.target, 'mediaelement');
 		if(!data){return;}
@@ -295,7 +295,7 @@ var addMediaToStopEvents = $.noop;
 			}
 		}
 	};
-	
+
 	addMediaToStopEvents = function(elem){
 		$(elem)
 			.off(hidevents)
@@ -312,9 +312,9 @@ $(document).on('emptied', function(e){
 	var data = getYtDataFromElem(e.target);
 	startAutoPlay(data);
 });
-	
-	
-	
+
+
+
 mediaelement.setActive = function(elem, type, data){
 	if(!data){
 		data = webshims.data(elem, 'mediaelement');
@@ -349,7 +349,7 @@ var handlePlayPauseState = function(state, data){
 		}
 		$(data._elem).trigger('playing');
 	}
-	
+
 	if(state == 'play' && data.paused){
 		data.paused = false;
 		trigger(data._elem, 'play');
@@ -417,10 +417,10 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 				handleBuffered();
 			}
 		};
-		
+
 		var getData = function(){
 			if(data.isActive == 'third' && data._ytAPI && data._ytAPI.getVolume){
-				
+
 				var volume = data._ytAPI.getVolume() / 100;
 				var muted = data._ytAPI.isMuted();
 				var triggerVolume;
@@ -449,9 +449,9 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 				}
 			}, 270);
 		};
-		
+
 		data._metatrys = 0;
-		
+
 		data._ytAPI = new YT.Player(elemId, {
 			height: '100%',
 			width: '100%',
@@ -465,7 +465,7 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 				autohide: 1,
 				controls: $.prop(mediaElm, 'controls') ? 1:0
 			},
-			
+
 			videoId: ytParams.videoId,
 			events: {
 				'onReady': function(e){
@@ -473,7 +473,7 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 					setTimeout(getData, 9);
 					setInterval(getData, 5000);
 				},
-				
+
 				'onStateChange': function(e){
 					if(!e.target.getDuration){
 						return;
@@ -485,7 +485,7 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 						}
 						var duration = e.target.getDuration();
 						var quality = e.target.getPlaybackQuality();
-						
+
 						if(duration){
 							data._metadata = true;
 							data.duration = duration;
@@ -495,7 +495,7 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 							if(data.networkState < 1){
 								data.networkState = 2;
 							}
-							
+
 							callMeta = true;
 							if(!qualityLevels[quality]){
 								quality = 'medium';
@@ -511,8 +511,8 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 							data._metatrys = 0;
 						}
 					}
-					
-					
+
+
 					if(callMeta){
 						$(mediaElm)
 							.trigger('durationchange')
@@ -543,9 +543,9 @@ var addYtAPI = function(mediaElm, elemId, data, ytParams){
 				}
 			}
 		});
-		
+
 		$(mediaElm).on('updateytdata', getData);
-		
+
 	});
 };
 
@@ -559,7 +559,7 @@ if('matchMedia' in window){
 		mediaelement.sortMedia = function(src1, src2){
 			src1 = !src1.media || matchMedia( src1.media ).matches;
 			src2 = !src2.media || matchMedia( src2.media ).matches;
-			return src1 == src2 ? 
+			return src1 == src2 ?
 				0 :
 				src1 ? -1
 				: 1;
@@ -582,7 +582,7 @@ mediaelement.createSWF = function(mediaElem, src, data){
 		$(mediaElem).css(attrStyle);
 		webshims.warn("width or height content attributes used. Webshims prefers the usage of CSS (computed styles or inline styles) to detect size of a video/audio. It's really more powerfull.");
 	}
-	
+
 	if(data){
 		mediaelement.setActive(mediaElem, 'third', data);
 		data.currentSrc = '';
@@ -602,8 +602,8 @@ mediaelement.createSWF = function(mediaElem, src, data){
 		trigger(data._elem, 'loadstart');
 		return;
 	}
-	
-	
+
+
 	var box = $('<div class="polyfill-video polyfill-mediaelement '+ webshims.shadowClass +'" id="wrapper-'+ elemId +'"><div id="'+ elemId +'"></div>')
 		.css({
 			position: 'relative',
@@ -613,9 +613,9 @@ mediaelement.createSWF = function(mediaElem, src, data){
 	var setDimension = function(){
 		setElementDimension(data);
 	};
-	
-	
-	
+
+
+
 	data = webshims.data(mediaElem, 'mediaelement', webshims.objectCreate(playerStateObj, {
 		shadowElem: {
 			value: box
@@ -649,16 +649,16 @@ mediaelement.createSWF = function(mediaElem, src, data){
 			}
 		}
 	}));
-	
-	
+
+
 	webshims.addShadowDom(mediaElem, box);
 	mediaelement.setActive(mediaElem, 'third', data);
 	addMediaToStopEvents(mediaElem);
-	
+
 	box.insertBefore(mediaElem);
-	
+
 	setElementDimension(data);
-	
+
 	addYtAPI(mediaElem, elemId, data, ytParams);
 	$(mediaElem)
 		.on('updatemediaelementdimensions loadedmetadata emptied', setDimension)
@@ -694,9 +694,9 @@ mediaelement.createSWF = function(mediaElem, src, data){
 		delete descs[key].writeable;
 		descs[key].set = setFn;
 	};
-	
+
 	getPropKeys.forEach(createGetProp);
-	
+
 	createGetSetProp('currentTime', function(t){
 		var data = getYtDataFromElem(this);
 		if(data){
@@ -709,7 +709,7 @@ mediaelement.createSWF = function(mediaElem, src, data){
 			return mediaSup.currentTime.prop._supset.apply(this, arguments);
 		}
 	});
-	
+
 	createGetSetProp('muted', function(mute){
 		var data = getYtDataFromElem(this);
 		if(data){
@@ -717,12 +717,12 @@ mediaelement.createSWF = function(mediaElem, src, data){
 				data._ytAPI[mute ? 'mute' : 'unMute']();
 				triggerUpdate(data);
 			}
-			 
+
 		} else {
 			return mediaSup.muted.prop._supset.apply(this, arguments);
 		}
 	});
-	
+
 	createGetSetProp('volume', function(v){
 		var data = getYtDataFromElem(this);
 		if(data){
@@ -734,15 +734,15 @@ mediaelement.createSWF = function(mediaElem, src, data){
 				data._ytAPI.setVolume(v);
 				triggerUpdate(data);
 			}
-			 
+
 		} else {
 			return mediaSup.volume.prop._supset.apply(this, arguments);
 		}
 	});
-	
+
 	$.each(['play', 'pause'], function(i, name){
 		var ytName = name+'Video';
-		descs[name] = { 
+		descs[name] = {
 			value: function(){
 				var data = getYtDataFromElem(this);
 				if(data){
@@ -757,21 +757,21 @@ mediaelement.createSWF = function(mediaElem, src, data){
 				} else {
 					return mediaSup[name].prop._supvalue.apply(this, arguments);
 				}
-			} 
+			}
 		};
-		
+
 	});
 	mediaSup = webshims.defineNodeNameProperties('video', descs, 'prop');
-	
+
 	webshims.onNodeNamesPropertyModify('video', 'controls', function(val, boolProp){
 		var data = getYtDataFromElem(this);
 		$(this)[boolProp ? 'addClass' : 'removeClass']('webshims-controls');
-		
+
 		if(data && data._ytAPI && !data.readyState){
 			$(this).mediaLoad();
 		}
 	});
-	
+
 })();
 
 

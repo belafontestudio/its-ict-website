@@ -49,6 +49,7 @@ block main
         img(src='images/success.png', alt='')
         h1 La tua candidatura è andata a buonfine! 
         p Puoi modificare il tuo profilo finchè le candidature saranno aperte.
+block scripts
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
   script(type='text/javascript', src='material-design-lite/material.min.js')
   script(src='//www.parsecdn.com/js/parse-1.5.0.min.js')
@@ -62,3 +63,8 @@ block main
     else
     $(this).text("MENU");
     });
+    $(window).load(function() { // makes sure the whole site is loaded
+      $('#status').fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(200).fadeOut('slow'); // will fade out the white DIV that covers the website.
+      $('body').delay(350).css({'overflow':'visible'});
+    })
