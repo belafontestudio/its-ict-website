@@ -15,8 +15,7 @@ jQuery(document).ready(function($) {
   slidesNavPosition: 'bottom',
   loopHorizontal: false,
   touchSensitivity: 10,
-  lockAnchors: true,
-  autoScrolling: true,
+  autoScrolling: false,
 
   scrollOverflow: true,
 
