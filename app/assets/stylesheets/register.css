@@ -67,9 +67,7 @@ cf:before,
 	color: white !important;
 }
 
-#preloader{
-	display: none;
-}
+
 
 .fix{
 	overflow-y: scroll;
