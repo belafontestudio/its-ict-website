@@ -119,3 +119,28 @@ label.birthday.isSet{
 #submit{
 	background-color: #FF5722;
 }
+
+.button-right a{
+	padding-right: 50px;
+	color: #FF5722;
+}
+
+.link_button{
+	background-color: red !important;
+	color: white !important;
+	max-width: 120px;
+}
+
+#logout{
+	color: white !important;
+}
+
+table{
+	margin: 0 0 16px 0 !important;
+	width: 100% !important;
+}
+
+#courses{
+	margin-bottom: 50px;
+
+}

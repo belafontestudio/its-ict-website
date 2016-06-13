@@ -40,7 +40,7 @@ html, body {
 }
 
 .button-righest {
-  width: 97%;
+  width: 100%;
   text-align: right;
 }
 
@@ -104,6 +104,18 @@ html, body {
 
 .elimina{
   color: #D32F2F !important;
+}
+
+.reset-success{
+  color: #FF5722 !important;
+}
+
+.reset-success:hover{
+  color: white !important;
+}
+
+h4{
+  color: white;
 }
 
 .avatar {
