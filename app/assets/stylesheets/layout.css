@@ -23,7 +23,9 @@
     height: auto !important;
 }*/
 
-
+.mc-field-group label{
+  color: black !important;  
+}
 .grey{
   background-color: #607D8B !important;
 }

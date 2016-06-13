@@ -1,0 +1,44 @@
+extends ./layouts/_htmlbp5
+
+
+
+
+block main
+  //- script#announcement-template(type='text/x-handlebars-template').
+  //-   <div id="popupContainer">
+  //-   <div id="shade"></div>
+  //-   <div id="popup">
+  //-   <h2>{{title}}</h2>
+  //-   <div class="scroller">{{{body}}}</div>
+  //-   <div id="close"><p>CHIUDI</p></div>
+  //-   </div>
+  //-   </div>
+
+
+
+  block iphone_menu
+    include ./partials/_iphone_menu_en
+  block main_menu
+    include ./partials/_main_menu_en
+  
+  #fullpage
+    block section0
+      include ./partials/_section0_en
+    block section1
+      include ./partials/_section1_en
+    block section2
+      include ./partials/_section2_en
+    block section3
+      include ./partials/_section3_en
+    block section4
+      include ./partials/_section4_en
+    block section5
+      include ./partials/_section5_en
+    block section6
+      include ./partials/_section6_en
+    
+  block outdated
+    include ./partials/_outdated
+  
+block js
+  script(src='/js/home.js').

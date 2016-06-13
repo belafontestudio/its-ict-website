@@ -1,3 +1,8 @@
 *, p, span {
 	color: white !important;
+
+}
+
+p, ul{
+	background-color: transparent !important;
 }
