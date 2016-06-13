@@ -127,6 +127,7 @@ a:hover span{
 
 .scrollmobile{
 	display: none;
+
 }
 
 
@@ -173,7 +174,13 @@ a:hover span{
 	color: white;
 	text-align: left;
 
+
 }
+
+#popup .scroller .MsoNormal b i u span{
+  text-decoration: underline;
+}
+
 
 #popup h2{
 	text-align: center;

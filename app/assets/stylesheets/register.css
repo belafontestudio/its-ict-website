@@ -2,6 +2,17 @@
 	height: 100vh;
   min-height: 600px;
 }
+
+input:focus{
+	border: 0;
+	background-color: transparent;
+}
+.input:-webkit-autofill{
+	background-color: transparent !important;
+	color: white !important;
+}
+
+
 .mdl-grid.demo-content{
   margin: auto;
   position: absolute;
@@ -9,10 +20,12 @@
   left: 0;
   right: 0;
 
-  min-height: 20%;
-  max-height: 90%;
 
   z-index: 1
+}
+
+h1, p{
+	color: white;
 }
 .noflow{
 	overflow: hidden;
@@ -36,12 +49,26 @@ cf:before,
 }
 
 .register{
-  background-color: rgba(56, 168, 218, 0.70) !important;
+  background-color: #455A64 !important;
   position: relative;
   padding: 17px;
   margin: 0 auto;
 
 
+
+}
+
+.mdl-textfield__input{
+	border-color: white !important;
+
+}
+
+.mdl-textfield__label{
+	color: white !important;
+}
+
+#preloader{
+	display: none;
 }
 
 .fix{
@@ -79,4 +106,18 @@ label.birthday.isSet{
 }
 .mdl-checkbox.is-checked .mdl-checkbox__box-outline{
   border: 2px solid white;
+}
+
+
+#section0{
+	    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+}
+
+#submit{
+	background-color: #FF5722;
 }
