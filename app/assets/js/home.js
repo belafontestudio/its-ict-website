@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 
   $('#fullpage').fullpage({
   verticalCentered: true,
-  slidesColor: ['#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B'],
+  slidesColor: ['#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B', '#607D8B'],
   anchors: ['home','campus', 'mobile', 'coding','video', 'aziende', 'contatti'],
   menu: '#menu',
   fixedElements: '#menu',
