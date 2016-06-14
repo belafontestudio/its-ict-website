@@ -82,6 +82,8 @@ $(document).ready(function(){
     var options = {
         // beforeSubmit:  showRequest,
         success:       showResponse,
+        error: showError,
+        resetForm: true
         // target:        '#output1',
     };
 
@@ -98,11 +100,41 @@ function showRequest(formData, jqForm, options) {
     // DOM element for the form do this:
     // var formElement = jqForm[0];
 
-    alert('About to submit: \n\n' + queryString);
+    //alert('About to submit: \n\n' + queryString);
     return true;
+}
+
+function showError() {
+  'use strict';
+  var snackbarContainer = document.querySelector('#demo-toast-example');
+  var showToastButton = document.querySelector('#demo-show-toast');
+
+    'use strict';
+    var data = {message: 'È successo un errore. Riprova '};
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
 }
 
 
 function showResponse(responseText, statusText, xhr, $form)  {
     // alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +'\n\nThe output div should have already been updated with the responseText.');
+    'use strict';
+    var snackbarContainer = document.querySelector('#demo-toast-example');
+    var showToastButton = document.querySelector('#demo-show-toast');
+
+      'use strict';
+      var data = {message: 'Mail Inviata con successo '};
+      snackbarContainer.MaterialSnackbar.showSnackbar(data);
+
 }
+
+
+(function() {
+  'use strict';
+  var snackbarContainer = document.querySelector('#demo-toast-example');
+  var showToastButton = document.querySelector('#demo-show-toast');
+  showToastButton.addEventListener('click', function() {
+    'use strict';
+    var data = {message: 'Mail Inviata con successo! '};
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  });
+}());
