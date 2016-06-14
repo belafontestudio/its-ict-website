@@ -80,20 +80,11 @@ $(document).ready(function(){
     });
 
     var options = {
-        target:        '#matching-form',   // target element(s) to be updated with server response
-        // beforeSubmit:  showRequest,  // pre-submit callback
-        success:       showResponse,  // post-submit callback
-
-        // other available options:
-        //url:       url         // override for form's 'action' attribute
-        //type:      type        // 'get' or 'post', override for form's 'method' attribute
-        //dataType:  null        // 'xml', 'script', or 'json' (expected server response type)
-        clearForm: true        // clear all form fields after successful submit
-        //resetForm: true        // reset the form after successful submit
-
+        beforeSubmit:  showRequest,
+        success:       showResponse,
+        // target:        '#output1',
     };
 
-    // bind to the form's submit event
     $('#matching-form').ajaxForm(options);
 });
 
@@ -108,13 +99,10 @@ function showRequest(formData, jqForm, options) {
     // var formElement = jqForm[0];
 
     alert('About to submit: \n\n' + queryString);
-
-    // here we could return false to prevent the form from being submitted;
-    // returning anything other than false will allow the form submit to continue
     return true;
 }
 
-// post-submit callback
+
 function showResponse(responseText, statusText, xhr, $form)  {
     alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +'\n\nThe output div should have already been updated with the responseText.');
 }

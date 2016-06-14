@@ -24,7 +24,7 @@
 }*/
 
 .mc-field-group label{
-  color: black !important;  
+  color: black !important;
 }
 .grey{
   background-color: #607D8B !important;
@@ -127,10 +127,7 @@ a:hover span{
 }
 
 
-.scrollmobile{
-	display: none;
 
-}
 
 
 
@@ -583,16 +580,49 @@ p.corso{
 
 }
 
+
+
+@media screen and (min-width: 321px) {
+
+  .scrollmobile, .scrollweb{
+  	display: none;
+
+  }
+
+  .scrolltablet{
+    display: block;
+  }
+
+}
+
 @media screen and (max-width: 767px){
   #fp-nav.left {
       left: 4px;
   }
+
+
+
+
+
 }
 
 @media screen and (min-width: 768px){
   #menu li.colored{
     margin-right: 10px;
   }
+
+
+  .scrollmobile, .scrolltablet{
+  	display: none;
+
+  }
+
+  .scrollweb{
+    display: block;
+  }
+
+
+
 }
 
 
@@ -690,7 +720,7 @@ p.corso{
 }
 
 #mobile2{
-	background-image: url(../images/bg4.png);
+
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -698,6 +728,8 @@ p.corso{
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+
 
 #mobile3{
 	background-image: url(../images/bg5.png);
@@ -760,7 +792,7 @@ p.corso{
 
 
 #video2{
-	background-image: url(../images/bg4v.png);
+	/*background-image: url(../images/bg4v.png);*/
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -770,7 +802,7 @@ p.corso{
 }
 
 #video3{
-	background-image: url(../images/bg5v.png);
+	/*background-image: url(../images/bg5v.png);*/
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -781,7 +813,7 @@ p.corso{
 
 
 #video4{
-	background-image: url(../images/bg6v.png);
+	/*background-image: url(../images/bg6v.png);*/
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -878,9 +910,8 @@ p.corso{
 }
 
 
-#mobile2{
-	background-image: url(../images/bg4_ipad.png);
-}
+
+
 
 #mobile3{
 	background-image: url(../images/bg5_ipad.png);
@@ -891,7 +922,7 @@ p.corso{
 	background-image: url(../images/bg6_ipad.png);
 }
 
-#video2{
+/*#video2{
 	background-image: url(../images/bg4v_ipad.png);
 }
 
@@ -901,7 +932,7 @@ p.corso{
 
 #video4{
 	background-image: url(../images/bg6v_ipad.png);
-}
+}*/
 
 #popup{
   width: 60%;
@@ -918,6 +949,20 @@ p.corso{
 }
 
 }
+
+
+.scrollmobile{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (max-width: 320px) {
+  .scrolltablet, .scrollweb{
+    display: none;
+  }
+}
+
 
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -1175,12 +1220,7 @@ a.link_bandi{
 }
 
 
-.scrollmobile{
-	text-align: center;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 
 
 #mobile2,
@@ -1254,3 +1294,12 @@ a.link_bandi{
   border-color: white;
 
 }*/
+
+
+#mobile2, #video2, #coding2{
+  background-color: #607D8B;
+}
+
+#mobile3, #mobile4, #video3, #video4, #coding3, #coding4{
+  background-color: #455A64;
+}
