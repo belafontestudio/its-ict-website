@@ -15,24 +15,25 @@
         .seven.columns
           .career-form.corso-form
             h3 Scegli il corso, noi ti proponiamo le persone! 
-            form(action='#')
+            form#matching-form(action='send-email.php', method="post")
+              input(type="hidden",name="Hidden")
               .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                input#sample1.mdl-textfield__input(type='text')
+                input#sample1.mdl-textfield__input(type='text',name="Nome", required)
                 label.mdl-textfield__label(for='sample1') Nome Contatto
               .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                input#sample2.mdl-textfield__input(type='text')
-                label.mdl-textfield__label(for='sample2') Nome Azienda
+                input#sample2.mdl-textfield__input(type='text', required)
+                label.mdl-textfield__label(for='sample2',name="Azienda") Nome Azienda
               .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                input#sample3.mdl-textfield__input(type='mail')
+                input#sample3.mdl-textfield__input(type='email',name="Email", required)
                 label.mdl-textfield__label(for='sample3') Email
               label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-1')
-                input#checkbox-1.mdl-checkbox__input(type='checkbox')
+                input#checkbox-1.mdl-checkbox__input(type='checkbox',name="Check")
                 span.mdl-checkbox__label Mobile App Design
               label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-2')
-                input#checkbox-2.mdl-checkbox__input(type='checkbox')
+                input#checkbox-2.mdl-checkbox__input(type='checkbox',name="Check")
                 span.mdl-checkbox__label Coding
               label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-3')
-                input#checkbox-3.mdl-checkbox__input(type='checkbox')
+                input#checkbox-3.mdl-checkbox__input(type='checkbox',name="Check")
                 span.mdl-checkbox__label Videomaking
-              button#richiedi.mdl-button.mdl-button-sito.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent
-                | Richiedi
+              input#richiedi.mdl-button.mdl-button-sito.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(type="submit",name="sub",value="Richiedi")
+                
