@@ -91,8 +91,6 @@ $(document).ready(function(){
         clearForm: true        // clear all form fields after successful submit
         //resetForm: true        // reset the form after successful submit
 
-        // $.ajax options can be used here too, for example:
-        //timeout:   3000
     };
 
     // bind to the form's submit event
