@@ -80,7 +80,7 @@ $(document).ready(function(){
     });
 
     var options = {
-        beforeSubmit:  showRequest,
+        // beforeSubmit:  showRequest,
         success:       showResponse,
         // target:        '#output1',
     };
@@ -104,5 +104,5 @@ function showRequest(formData, jqForm, options) {
 
 
 function showResponse(responseText, statusText, xhr, $form)  {
-    alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +'\n\nThe output div should have already been updated with the responseText.');
+    // alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +'\n\nThe output div should have already been updated with the responseText.');
 }
