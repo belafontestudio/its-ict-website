@@ -436,10 +436,7 @@ a.link_bandi{
 	margin-bottom: 0;
 }
 
-.box{
-	margin: 0;
-	padding: 20px;
-}
+
 
 .purple{
 	margin-top: 80px;
@@ -450,7 +447,10 @@ a.link_bandi{
 
 .green{
   background-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0.70) !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+
 }
 
 a.button{
@@ -1154,7 +1154,7 @@ li.erasmus a{
 
 div.article.article_bandi{
 	width: 100%;
-	background-color:#9b59b6 ;
+
 	margin: 0;
 	padding: 0;
 }
@@ -1195,7 +1195,7 @@ a.link_bandi{
 }
 
 .scale-with-grid2{
-	width:90%;
+	width:50%;
 }
 
 
@@ -1296,10 +1296,35 @@ a.link_bandi{
 }*/
 
 
-#mobile2, #video2, #coding2{
+#mobile2, #video2, #coding2, #aziende5{
   background-color: #607D8B;
 }
 
 #mobile3, #mobile4, #video3, #video4, #coding3, #coding4{
   background-color: #455A64;
+}
+
+
+
+
+
+.box{
+	margin: 0;
+	padding: 20px;
+  background-color: rgba(255, 255, 255, 0.6)
+}
+
+@media only screen and (max-width: 500px){
+
+  .title, .title2{
+    color: black;
+  }
+  .box{
+    background-color: transparent;
+    padding: 70px 0;
+  }
+
+  .white{
+    background: rgba(255, 255, 255, 0.8);
+  }
 }
