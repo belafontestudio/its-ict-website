@@ -121,9 +121,9 @@ function showResponse(responseText, statusText, xhr, $form)  {
     var snackbarContainer = document.querySelector('#demo-toast-example');
     var showToastButton = document.querySelector('#demo-show-toast');
 
-      'use strict';
-      var data = {message: 'Mail Inviata con successo '};
-      snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    'use strict';
+    var data = {message: 'Mail Inviata con successo '};
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
 
 }
 
