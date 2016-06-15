@@ -6,6 +6,10 @@ html{
   font-family: "Raleway", Arial, sans-serif !important;
 }
 
+#wrapper{
+  margin-bottom: -20px;
+}
+
 input:focus{
   width:100%;
   height: auto;
