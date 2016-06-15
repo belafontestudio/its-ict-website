@@ -116,7 +116,10 @@ function showError() {
 
 
 function showResponse(responseText, statusText, xhr, $form)  {
+<<<<<<< HEAD
     // alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +'\n\nThe output div should have already been updated with the responseText.');
+=======
+    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +'\n\nThe output div should have already been updated with the responseText.');
     'use strict';
     var snackbarContainer = document.querySelector('#demo-toast-example');
     var showToastButton = document.querySelector('#demo-show-toast');
@@ -125,6 +128,7 @@ function showResponse(responseText, statusText, xhr, $form)  {
       var data = {message: 'Mail Inviata con successo '};
       snackbarContainer.MaterialSnackbar.showSnackbar(data);
 
+>>>>>>> 1f0bf390fb1ea989f7b32b08d1097263ed8d1e19
 }
 
 

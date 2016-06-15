@@ -7,6 +7,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $azienda = strip_tags(trim($_POST["Azienda"]));
   $emailaddress = filter_var(trim($_POST["Email"]), FILTER_SANITIZE_EMAIL);
 
+  $check1 = strip_tags(trim($_POST["Check1"]));
+  $check2 = strip_tags(trim($_POST["Check2"]));
+  $check3 = strip_tags(trim($_POST["Check3"]));
+
+  $message = $emailaddress." - ".$azienda;
+
+  if($check1=="on" || $check2=="on" || $check3=="on"){
+    $message .= " - interessato a\r\n";
+  }
+  if($check1=="on"){
+    $check1 = "Mobile App Design\r\n";
+    $message .= $check1." ";
+  }
+  if($check2=="on"){
+    $check2 = "Coding\r\n";
+    $message .= $check2." ";
+  }
+  if($check3=="on"){
+    $check3 = "Videomaking\r\n";
+    $message .= $check3." ";
+  }
+
+
+
+
   $sendgrid = new SendGrid('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', array('raise_exceptions' => false));
 
   $email = new SendGrid\Email();
@@ -14,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       ->addTo('piermaria@belafonte.co')
       ->setFrom($emailaddress)
       ->setSubject($emailaddress." - ".$azienda)
-      ->setText($emailaddress." - ".$azienda." interessato a");
+      ->setText($message);
   $res = $sendgrid->send($email);
 
 
