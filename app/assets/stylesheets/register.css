@@ -144,3 +144,8 @@ table{
 	margin-bottom: 50px;
 
 }
+
+
+.fixed{
+	position: fixed;
+}
