@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
   console.log('ready');
 
-  
+
 
   // //plugin function, place inside DOM ready function
   // outdatedBrowser({
@@ -25,6 +25,16 @@ jQuery(document).ready(function($) {
       $(this).text("CHIUDI")
     }else{
       $(this).text("MENU");
+    }
+  });
+
+  $( ".iphone_menu li a" ).click(function() {
+    console.log('click')
+    $( ".iphone_menu" ).toggle( "slow" );
+    if ($("#iphone_menu").text() =="MENU"){
+      $("#iphone_menu").text("CHIUDI")
+    }else{
+      $("#iphone_menu").text("MENU");
     }
   });
 
