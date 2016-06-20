@@ -54,12 +54,39 @@ block scripts
                     <p>{{attributes.course}}</p>
                 </div>
                 <div class="career-profile-head-button">
-                    <button class="mdl-button mdl-button-profile mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Contatta
+                    <button class="student mdl-button mdl-button-profile mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Contatta
                         <span class="">
                             <span class=""></span>
                         </span>
                     </button>
                 </div>
+                <div class="contact-form mdl-card mdl-shadow--2dp">
+                  <form id="matching-form" action="send-email.php" method="post">
+                    <input type="hidden" name="Hidden"/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input id="sample1" type="text" name="Nome" required="required" class="mdl-textfield__input"/>
+                      <label for="sample1" class="mdl-textfield__label">Nome Contatto</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input id="sample2" type="text" name="Azienda" required="required" class="mdl-textfield__input"/>
+                      <label for="sample2" class="mdl-textfield__label">Nome Azienda</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input id="sample3" type="email" name="Email" required="required" class="mdl-textfield__input"/>
+                      <label for="sample3" class="mdl-textfield__label">Email</label>
+                    </div>
+                    <label for="checkbox-1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                      <input id="checkbox-1" type="checkbox" name="Check1" class="mdl-checkbox__input"/><span class="mdl-checkbox__label">Mobile App Design</span>
+                    </label>
+                    <label for="checkbox-2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                      <input id="checkbox-2" type="checkbox" name="Check2" class="mdl-checkbox__input"/><span class="mdl-checkbox__label">Coding</span>
+                    </label>
+                    <label for="checkbox-3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                      <input id="checkbox-3" type="checkbox" name="Check3" class="mdl-checkbox__input"/><span class="mdl-checkbox__label">Videomaking</span>
+                    </label>
+                    <input id="richiedi" type="submit" name="sub" value="Richiedi" class="mdl-button mdl-button-sito mdl-js-button mdl-button--raised"/>
+                  </form>
+              </div>
             </div>
             <div class="seven columns career-profile career-profile-bio">
                 <div class="career-profile-bio-title">

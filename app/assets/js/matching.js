@@ -4,48 +4,39 @@ var studentCounter = 0;
 var totalStudents = 0;
 var studentsList;
 
-function getStudentsTemplate(studentsList){
+function getStudentsTemplate(studentsList,year){
   var source   = $("#student-template").html();
   var template = Handlebars.compile(source);
 
   var html= template({student:studentsList});
   $('#students').append(html);
+  $('#years').show();
+  if(studentsList.length > 0){
+    $('.student-title').text("Anno "+year);
+  }else{
+    $('.student-title').text("Non sono presenti studenti con questo filtro");
+  }
+  $('html, body').animate({
+    scrollTop: $(".career-03-wrapper").offset().top
+  }, 1000);
 
 }
 
-function getYear(index,student, selectedYear){
-
-  var Years = Parse.Object.extend('Year');
-  var yearQuery = new Parse.Query(Years);
-  yearQuery.equalTo('year', student);
-  yearQuery.descending('createdAt');
-  yearQuery.find({
-    success: function(year) {
-        studentsList[index].year = year;
-
-        studentCounter += 1;
-
-        if(studentCounter == totalStudents){
-            getStudentsTemplate(studentsList);
-        }
-        console.log("studentCounter "+studentCounter);
-
-    },
-    error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
-    }
-  });
-}
 
 function eachStudent(students,selectedYear){
 
-  $( students ).each(function( index,student ) {
-    getYear(index,student,selectedYear);
-  });
-  studentsList = students;
 
+  studentsList = students;
+  getStudentsTemplate(studentsList,selectedYear);
 
   totalStudents = students.length;
+  if(totalStudents == 0){
+    $('#years').show();
+    $('.student-title').text("Non sono presenti studenti con questo filtro");
+    $('html, body').animate({
+      scrollTop: $(".career-03-wrapper").offset().top
+    }, 1000);
+  }
   console.log("totalStudents "+totalStudents);
 }
 
@@ -54,13 +45,17 @@ function getStudents(courses,year){
   var Student = Parse.Object.extend("Student");
 
   var query = new Parse.Query(Student);
-  console.log(courses);
+  console.log("anno"+year)
   query.containedIn("course", courses);
-
+  query.include("year");
+  var yearQuery = new Parse.Query("Year");
+  yearQuery.equalTo('year', year);
+  query.matchesQuery("year", yearQuery);
   query.descending("createdAt");
   query.find({
     success: function(students) {
       eachStudent(students,year);
+
 
     },
     error: function(error) {
@@ -124,6 +119,21 @@ $(document).ready(function(){
     });
 
 
+    $("form#filter").click(function(){
+      $('#years').hide();
+    })
+
+    $(".career-03-wrapper").on("click", "button.student", function() {
+      $(this).parent().hide();
+      $(this).parent().next(".contact-form").show();
+    });
+
+
+
+
+
+
+
     // $("#visiona").click(function(e) {
     //   e.preventDefault();
     //   $('html, body').animate({
@@ -183,6 +193,7 @@ function showRequest2(formData, jqForm, options) {
     }
 
     getStudents(courses,year);
+
     return true;
 }
 

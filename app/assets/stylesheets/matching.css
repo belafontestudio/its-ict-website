@@ -284,3 +284,10 @@ h3{
 .mdl-snackbar{
   background-color: #8AC249;
 }
+
+#years{
+  display: none;
+}
+.contact-form{
+  display: none;
+}
