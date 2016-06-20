@@ -14,10 +14,10 @@ block main
       include ./partials/_section-matching-0
     block section-matching-1
       include ./partials/_section-matching-1
-    //- block section-matching-2
-    //-   include ./partials/_section-matching-2
-    //- block section-matching-3
-    //-   include ./partials/_section-matching-3
+    block section-matching-2
+      include ./partials/_section-matching-2
+    block section-matching-3
+      include ./partials/_section-matching-3
     
   
   block outdated
@@ -35,7 +35,13 @@ block scripts
   script(type='text/javascript', src='js/underscore-min.js').
   script(src='js/matching.js').
   //- script(type='text/javascript', src='js/home.js').
-    
+  script#year-template(type='text/x-handlebars-template').
+    {{#each year}}
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-{{attributes.year}}">
+        <input class="mdl-radio__button" id="option-{{attributes.year}}" type='radio' name='options' value='{{attributes.year}}' checked/>
+        <span class="mdl-radio__label">Anno {{attributes.year}}</span>
+      </label>
+    {{/each}}
   script#student-template(type='text/x-handlebars-template').
     {{#each student}}
       <div class="row line-bottom">
@@ -44,7 +50,8 @@ block scripts
                 <img src="{{attributes.portrait._url}}" alt="student portrait" />
                 </div>
                 <div class="career-profile-head-name">
-                    <p>{{attributes.name}} {{attributes.surname}}</p>
+                    <h2>{{attributes.name}} {{attributes.surname}}</h2>
+                    <p>{{attributes.course}}</p>
                 </div>
                 <div class="career-profile-head-button">
                     <button class="mdl-button mdl-button-profile mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Contatta
