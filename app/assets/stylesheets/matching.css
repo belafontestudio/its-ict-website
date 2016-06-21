@@ -251,8 +251,14 @@ h3{
 
 }
 
-.career-profile-head-name p{
+.career-profile-head-name h2{
   font-size: 24px;
+  line-height: 25px;
+}
+
+.career-profile-head-name p{
+  font-size: 18px;
+  line-height: 19px;
 }
 
 .mdl-button-profile{
@@ -280,7 +286,10 @@ h3{
   width: 165px;
 }
 
+.career-03-wrapper{
+  position: relative;
 
+}
 .mdl-snackbar{
   background-color: #8AC249;
 }
@@ -290,4 +299,39 @@ h3{
 }
 .contact-form{
   display: none;
+  padding: 10px;
+  position: absolute;
+  left: calc(50% - 165px);
+  z-index: 10000;
+
+}
+
+@media screen and (min-width: 768px){
+  .contact-form{
+        left: calc(100% - 360px);
+  }
+}
+@media screen and (min-width: 1280px){
+  .career-03-wrapper{
+    width: 1280px;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+.chiudi{
+      margin-top: 29px;
+}
+
+#matching-form0 *{
+  color: black !important
+}
+
+#richiedi0{
+  position: relative;
+  margin-top: 30px;
+  left: 10px;
+  color: white !important;
+  width: 180px;
+  background-color: #FF5722 !important;
 }

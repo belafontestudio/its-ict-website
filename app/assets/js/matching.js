@@ -23,7 +23,7 @@ function getStudentsTemplate(studentsList,year){
 }
 
 
-function eachStudent(students,selectedYear){
+function eachStudent(students,selectedYear, totalStudents){
 
 
   studentsList = students;
@@ -124,9 +124,19 @@ $(document).ready(function(){
     })
 
     $(".career-03-wrapper").on("click", "button.student", function() {
-      $(this).parent().hide();
-      $(this).parent().next(".contact-form").show();
+      $(this).parent().fadeOut();
+      $(".contact-form").fadeIn();
+      $('html, body').animate({
+          scrollTop: $(".contact-form").offset().top
+      }, 1500);
     });
+
+    $(".career-03-wrapper").on("click", "button.chiudi", function() {
+      $('.career-profile-head-button').fadeIn();
+      $(".contact-form").fadeOut();
+    });
+
+
 
 
 
@@ -162,11 +172,12 @@ $(document).ready(function(){
     };
     var options2 = {
         beforeSubmit:  showRequest2,
+        success:       showResponse2,
         error: showError
         // target:        '#output1',
     };
 
-    $('#matching-form').ajaxForm(options);
+    $('#matching-form, #matching-form0').ajaxForm(options);
     $('#filter').ajaxForm(options2);
 });
 function cleanStudents(){
@@ -232,16 +243,25 @@ function showResponse(responseText, statusText, xhr, $form)  {
     var data = {message: 'Mail Inviata con successo '};
     snackbarContainer.MaterialSnackbar.showSnackbar(data);
 
+    $('.contact-form').fadeOut();
+
 }
 
 
-(function() {
-  'use strict';
-  var snackbarContainer = document.querySelector('#demo-toast-example');
-  var showToastButton = document.querySelector('#demo-show-toast');
-  showToastButton.addEventListener('click', function() {
+function showResponse2(responseText, statusText, xhr, $form)  {
+    // alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +'\n\nThe output div should have already been updated with the responseText.');
     'use strict';
-    var data = {message: 'Mail Inviata con successo! '};
+    var snackbarContainer = document.querySelector('#demo-toast-example');
+    var showToastButton = document.querySelector('#demo-show-toast');
+
+    'use strict';
+    var totalStudentss = $('.career-profile-head-name').length + 1;
+    //var data = {message: 'Abbiamo trovato ' + totalStudentss + ' studenti'};
+    var data = {message: 'Ricerca completata'};
     snackbarContainer.MaterialSnackbar.showSnackbar(data);
-  });
-}());
+
+    $('.career-profile-head-button button').fadeIn();
+
+
+
+}
