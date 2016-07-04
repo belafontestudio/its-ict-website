@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
   fixedElements: '#menu',
   navigation:true,
   navigationPosition: 'left',
-  navigationTooltips: ['Home','Campus', 'Mobile', 'Video', 'Aziende', 'Contatti'],
+  navigationTooltips: ['Home','Campus', 'Mobile', 'Backend', 'Aziende', 'Contatti'],
   slidesNavigation: true,
   slidesNavPosition: 'bottom',
   loopHorizontal: false,
