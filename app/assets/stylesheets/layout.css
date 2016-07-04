@@ -534,7 +534,7 @@ p.corso{
 	width: 100%;
 	padding: 0;
 	margin:0;
-	background: rgba(36,47,54, .7);
+	background: rgba(69,90,100, .8);
 }
 
 #menu li {
@@ -1053,7 +1053,7 @@ p.corso{
 	height: auto;
 	padding: 0;
 	margin:0;
-	background:#212121;
+	background:rgba(69,90,100, .9);
 }
 
 #iphone_menu {

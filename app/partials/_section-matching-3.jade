@@ -1,7 +1,7 @@
 .career-03-wrapper
   .contact-form.mdl-card.mdl-shadow--4dp
-    form#matching-form0(action='send-email.php', method="post")
-      input(type="hidden",name="Hidden")
+    form#matching-form0(action='send-email-student.php', method="post")
+      input#student-to-send(type="hidden",name="Hidden")
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
         input#sample10.mdl-textfield__input(type='text',name="Nome", required)
         label.mdl-textfield__label(for='sample10') Nome Contatto
@@ -11,15 +11,6 @@
       .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
         input#sample30.mdl-textfield__input(type='email',name="Email", required)
         label.mdl-textfield__label(for='sample30') Email
-      label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-10')
-        input#checkbox-10.mdl-checkbox__input(type='checkbox',name="Check1")
-        span.mdl-checkbox__label Mobile App Design
-      label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-20')
-        input#checkbox-20.mdl-checkbox__input(type='checkbox',name="Check2")
-        span.mdl-checkbox__label Coding
-      label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='checkbox-30')
-        input#checkbox-30.mdl-checkbox__input(type='checkbox',name="Check3")
-        span.mdl-checkbox__label Videomaking
       button.mdl-button.mdl-js-button.chiudi CHIUDI
       input#richiedi0.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent(type="submit",name="sub",value="Richiedi")
     
