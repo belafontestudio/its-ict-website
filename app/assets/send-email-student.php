@@ -7,27 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $azienda = strip_tags(trim($_POST["Azienda"]));
   $emailaddress = filter_var(trim($_POST["Email"]), FILTER_SANITIZE_EMAIL);
 
-  $check1 = strip_tags(trim($_POST["Check1"]));
-  $check2 = strip_tags(trim($_POST["Check2"]));
-  $check3 = strip_tags(trim($_POST["Check3"]));
+  $student = strip_tags(trim($_POST["Hidden"]));
 
-  $message = $emailaddress." - ".$azienda;
 
-  if($check1=="on" || $check2=="on" || $check3=="on"){
-    $message .= " - interessato a\r\n";
-  }
-  if($check1=="on"){
-    $check1 = "Mobile App Design\r\n";
-    $message .= $check1." ";
-  }
-  if($check2=="on"){
-    $check2 = "Coding\r\n";
-    $message .= $check2." ";
-  }
-  if($check3=="on"){
-    $check3 = "Videomaking\r\n";
-    $message .= $check3." ";
-  }
+  $message = $emailaddress." - ".$azienda." - interessato a $student";
+
+
+
 
 
 

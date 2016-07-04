@@ -126,6 +126,9 @@ $(document).ready(function(){
     $(".career-03-wrapper").on("click", "button.student", function() {
       $(this).parent().fadeOut();
       $(".contact-form").fadeIn();
+      var  studentToSend = $(this).parent().siblings(".career-profile-head-name").children("h2").text();
+
+      $("input#student-to-send").val(studentToSend);
       $('html, body').animate({
           scrollTop: $(".contact-form").offset().top
       }, 1500);
@@ -176,9 +179,17 @@ $(document).ready(function(){
         error: showError
         // target:        '#output1',
     };
+    var options3 = {
+        beforeSubmit:  showRequest,
+        success:       showResponse,
+        error: showError,
+        clearForm: false
+        // target:        '#output1',
+    };
 
     $('#matching-form, #matching-form0').ajaxForm(options);
     $('#filter').ajaxForm(options2);
+    $('#richiedi0').ajaxForm(options3);
 });
 function cleanStudents(){
   studentCounter = 0;
@@ -255,13 +266,11 @@ function showResponse2(responseText, statusText, xhr, $form)  {
     var showToastButton = document.querySelector('#demo-show-toast');
 
     'use strict';
-    var totalStudentss = $('.career-profile-head-name').length + 1;
+
     //var data = {message: 'Abbiamo trovato ' + totalStudentss + ' studenti'};
     var data = {message: 'Ricerca completata'};
     snackbarContainer.MaterialSnackbar.showSnackbar(data);
 
     $('.career-profile-head-button button').fadeIn();
-
-
 
 }
