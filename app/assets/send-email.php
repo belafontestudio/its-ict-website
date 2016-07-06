@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Get the form fields and remove whitespace.
   $name = strip_tags(trim($_POST["Nome"]));
   $azienda = strip_tags(trim($_POST["Azienda"]));
+  $messaggio = strip_tags(trim($_POST["Messaggio"]));
   $emailaddress = filter_var(trim($_POST["Email"]), FILTER_SANITIZE_EMAIL);
 
   $check1 = strip_tags(trim($_POST["Check1"]));
@@ -28,6 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check3 = "Videomaking\r\n";
     $message .= $check3." ";
   }
+
+  $message .= " - ".$messaggio;
 
 
 
