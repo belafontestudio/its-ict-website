@@ -3,6 +3,7 @@ extends ./layouts/_htmlbp5
 block extra-css
   link(rel='stylesheet', href='https://code.getmdl.io/1.1.3/material.deep_orange-indigo.min.css')
   link(rel='stylesheet', href='stylesheets/matching.css')
+  link(rel='stylesheet', href='stylesheets/transparency.css')
 
 block main
   block iphone_menu
@@ -10,8 +11,8 @@ block main
   block main_menu
     include ./partials/_main_menu
   #wrapper
-    block section-matching-0
-      include ./partials/_section-matching-0
+    block section-matching-1
+      include ./partials/_section-transparency-1
     
     
   
@@ -28,7 +29,8 @@ block scripts
   script(type='text/javascript', src='js/js-webshim/minified/polyfiller.js').
   script(src='//www.parsecdn.com/js/parse-1.5.0.min.js').
   script(type='text/javascript', src='js/underscore-min.js').
-  script(src='js/matching.js').
+  //- script(src='js/matching.js').
+  script(src='js/transparency.js').
   //- script(type='text/javascript', src='js/home.js').
   script#year-template(type='text/x-handlebars-template').
     {{#each year}}
